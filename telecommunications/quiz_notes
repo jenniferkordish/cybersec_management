@@ -1,0 +1,2254 @@
+Each answer lists two types of devices used in a 100BASE-T network. If these devices were connected with UTP Ethernet cables, which pairs of devices would require a straight-through cable? (Choose three answers.)
+
+A PC and switch 
+B Hub and switch 
+C Router and hub 
+D Wireless access point (Ethernet port) and switch 
+E PC and router
+
+Explanation: Answers A, C, and D are correct.
+
+Routers, wireless access point Ethernet ports, and PC NICs all send using pins 1 and 2, whereas hubs and LAN switches transmit on pins 3 and 6. Straight-through cables connect devices that use opposite pin pairs for sending, because the cable does not need to cross the pairs. 
+Lesson: Fundamentals of Ethernet LANs 
+Objective: Building Physical Ethernet Networks with UTP
+
+
+Which of the following are true about the format of Ethernet addresses? (Choose three answers.)
+A Each manufacturer puts a unique OUI code into the first 3 bytes of the address. 
+B Each manufacturer puts a unique OUI code into the first half of the address. 
+C The part of the address that holds this manufacturer's code is called the MAC. 
+D The part of the address that holds this manufacturer's code is called the OUI. 
+E The part of the address that holds this manufacturer's code has no specific name. 
+F Each manufacturer puts a unique OUI code into the first 2 bytes of the address.
+
+Explanation: Answers A, B, and D are correct.
+
+The pre-assigned universal MAC address, given to each Ethernet port when manufactured, breaks the address into two 3-byte halves. The first half is called the organizationally unique identifier (OUI), which the IEEE assigns to the company that builds the product as a unique hex number to be used only by that company. 
+Lesson: Fundamentals of Ethernet LANs 
+Objective: Sending Data in Ethernet Networks
+
+The process of TCP on one computer marking a TCP segment as segment 1, and the receiving computer then acknowledging the receipt of TCP segment 1 is an example of what?
+A Adjacent-layer interaction 
+B OSI model 
+C All of these answers are correct. 
+D Data encapsulation 
+E Same-layer interaction
+
+Explanation: Answer E is correct.
+
+Same-layer interaction occurs on multiple computers. The functions defined by that layer typically need to be accomplished by multiple computers - for example, the sender setting a sequence number for a segment, and the receiver acknowledging receipt of that segment. A single layer defines that process, but the implementation of that layer on multiple devices is required to accomplish the function. 
+
+Lesson: Introduction to TCP/IP Networking 
+Objective: TCP/IP Networking Model
+
+Which of the following terms is used specifically to identify the entity created when encapsulating data inside data link layer headers and trailers?
+A Segment 
+B Chunk 
+C Data 
+D Packet 
+E Frame
+
+Explanation: Answer E is correct.
+
+By convention, the term frame refers to the part of a network message that includes the data link header and trailer, with encapsulated data. The term packet omits the data link header and trailer, leaving the network layer header with its encapsulated data. The term segment omits the network layer header, leaving the transport layer header and its encapsulated data. 
+Lesson: Introduction to TCP/IP Networking 
+Objective: TCP/IP Networking Model
+
+The process of HTTP asking TCP to send some data and making sure that it is received correctly is an example of what?
+A Same-layer interaction 
+B Adjacent-layer interaction 
+C OSI model 
+D All of these answers are correct.
+
+Explanation: Answer B is correct.
+
+Adjacent-layer interaction occurs on one computer, with two adjacent layers in the model. The higher layer requests services from the next lower layer, and the lower layer provides the services to the next higher layer. 
+Lesson: Introduction to TCP/IP Networking 
+Objective: TCP/IP Networking Model
+
+Which OSI layer defines the functions of logical network-wide addressing and routing?
+A Layer 5, 6, or 7 
+B Layer 4 
+C Layer 3 
+D Layer 2 
+E Layer 1
+
+Explanation: Answer C is correct.
+
+The network layer concerns itself with delivery of data over the complete end-to-end path. That requires a way to identify each device, using addresses, and the addresses must be logical addresses that are therefore not tied to the physical details of the network. 
+Lesson: Introduction to TCP/IP Networking 
+Objective: OSI Networking Model
+
+
+In the LAN for a small office, some user devices connect to the LAN using a cable, while others connect using wireless technology (and no cable). Which of the following is true regarding the use of Ethernet in this LAN?
+A Only the devices that use wireless are using Ethernet. 
+B Only the devices that use cables are using Ethernet. 
+C None of the devices are using Ethernet. 
+D Both the devices using cables and those using wireless are using Ethernet.
+
+Explanation: Answer B is correct.
+
+The IEEE defines Ethernet LAN standards, with standard names that begin with 802.3, all of which happen to use cabling. The IEEE also defines wireless LAN standards, with standard names that begin with 802.11, which are separate standards from Ethernet. 
+Lesson: Fundamentals of Ethernet LANs 
+Objective: An Overview of LANs
+
+Which of the following protocols are examples of TCP/IP data link layer protocols? (Choose two answers.)
+
+A Ethernet 
+B HTTP 
+C IP 
+D UDP 
+E SMTP 
+F TCP 
+G PPP
+
+Explanation: Answers A and G are correct.
+
+Of the remaining answers, IP is a network layer protocol, TCP and UDP are transport layer protocols, and SMTP and HTTP are application layer protocols. 
+Lesson: Introduction to TCP/IP Networking 
+Objective: TCP/IP Networking Model
+
+Which of the following is true about the CSMA/CD algorithm?
+
+A The algorithm never allows collisions to occur. 
+B Collisions can happen, but the algorithm defines how the computers should notice a collision and how to recover. 
+C The algorithm works with only two devices on the same Ethernet. 
+D None of the other answers is correct.
+
+Explanation: Answer B is correct.
+
+NICs (and switch ports) use the carrier sense multiple access with collision detection (CSMA/CD) algorithm to implement half-duplex logic. CSMA/CD attempts to avoid collisions, but it also notices when collisions do occur, with rules about how the Ethernet nodes should stop sending, wait, and try again later. 
+Lesson: Fundamentals of Ethernet LANs 
+Objective: Sending Data in Ethernet Networks
+
+
+Which of the following Ethernet standards defines Gigabit Ethernet over UTP cabling?
+
+A None of the other answers is correct. 
+B 1000BASE-T 
+C 100BASE-T 
+D 10GBASE-T 
+
+Explanation: Answer B is correct.
+
+The number before the word BASE defines the speed, in megabits per second (Mbps). 1000 Mbps equals 1 gigabit per second (1 Gbps). The T in the suffix implies twisted-pair or UTP cabling, so 1000BASE-T is the UTP-based Gigabit Ethernet standard name. 
+Lesson: Fundamentals of Ethernet LANs 
+Objective: Building Physical Ethernet Networks with UTP
+
+
+
+In the URI http://www.certskills.com/ICND1, which part identifies the web server?
+A The file name.html includes the hostname. 
+B http://www.certskills.com 
+C certskills.com 
+D www.certskills.com 
+E http
+
+Explanation: Answer D is correct.
+
+Note that the hostname is all the text between the // and the /. The text before the // identifies the application layer protocol, and the text after the / represents the name of the web page. 
+Lesson: Fundamentals of TCP/IP Transport and Applications 
+Objective: TCP/IP Applications
+
+
+Which of the following is the shortest valid abbreviation for FE80:0000:0000:0100:0000:0000:0000:0123?
+A FE8::1::123 
+B FE80::100:0:0:0:123:4567 
+C FE80:0:0:100::123 
+D FE80::100::123
+
+Explanation: Answer C is correct.
+
+If following the steps in the book, the first step removes up to three leading 0s in each quartet, leaving FE80:0:0:100:0:0:0:123. This leaves two strings of consecutive all-0 quartets; by changing the longest string of all 0s to ::, the address is FE80:0:0:100::123. 
+Lesson: Fundamentals of IP Version 6 
+Objective: IPv6 Addressing Formats and Conventions
+
+
+Which of the following was a short-term solution to the IPv4 address exhaustion problem?
+A IP version 6 
+B IP version 5 
+C NAT/PAT 
+D ARP
+
+Explanation: Answer C is correct.
+
+NAT, specifically the PAT feature that allows many hosts to use private IPv4 addresses while being supported by a single public IPv4 address, was one short-term solution to the IPv4 address exhaustion problem. IP version 5 existed briefly as an experimental protocol and had nothing to do with IPv4 address exhaustion. IPv6 directly addresses the IPv4 address exhaustion problem, but it is a long-term solution. ARP has no impact on the number of IPv4 addresses used. 
+Lesson: Fundamentals of IP Version 6 
+Objective: Introduction to IPv6
+
+
+What is the assignable range of values for the first octet for Class A IP networks?
+
+A 1 to 127 
+B 0 to 126 
+C 0 to 127 
+D 128 to 192 
+E 128 to 191 
+F 1 to 126
+
+Explanation: Answer F is correct.
+
+The first octet of Class A addresses ranges from 1 to 126, inclusive; Class B, 128 to 191, inclusive; and Class C, 192 to 223 inclusive. 127 is technically in the Class A range, but it is a reserved address used as a loopback. 
+Lesson: Fundamentals of IPv4 Addressing and Routing 
+Objective: IPv4 Addressing
+
+
+PC1 and PC2 are on two different Ethernet LANs that are separated by an IP router. PC1's IP address is 10.1.1.1, and no subnetting is used. Which of the following addresses could be used for PC2? (Choose two answers.)
+
+A 10.200.200.1 
+B 9.1.1.1 
+C 225.1.1.1 
+D 1.1.1.1 
+E 10.1.1.2 
+F 10.2.2.2
+
+Explanation: Answers B and D are correct.
+
+Without any subnetting in use, all addresses in the same network as 10.1.1.1 - all addresses in Class A network 10.0.0.0 - must be on the same LAN. Addresses separated from that network by some router cannot be in network 10.0.0.0. So, the two correct answers are the only two answers that list a valid unicast IP address that is not in network 10.0.0.0. 
+Lesson: Fundamentals of IPv4 Addressing and Routing 
+Objective: IPv4 Addressing
+
+
+A router receives an Ethernet frame that holds an IPv6 packet. The router then makes a decision to route the packet out a serial link. Which of the following statements is true about how a router forwards an IPv6 packet?
+
+A The router keeps the Ethernet header, encapsulating the entire frame inside a new IPv6 packet before sending it over the serial link. 
+B The router makes the forwarding decision based on the packet's source IPv6 address. 
+C The router discards the Ethernet data-link header and trailer of the received frame. 
+D The router uses the IPv4 routing table when choosing where to forward the packet.
+
+Explanation: Answer C is correct.
+
+Routers use the same process steps when routing IPv6 packets as they do when routing IPv4 packets. Routers route IPv6 packets based on the IPv6 addresses, listed inside the IPv6 header in the IPv6 packets, by comparing the destination IPv6 address to the router's IPv6 routing table. As a result, the router discards the incoming frame's data-link header and trailer, leaving an IPv6 packet. The router compares the destination (not source) IPv6 address in the header to the router's IPv6 (not IPv4) routing table and then forwards the packet based on the matched route. 
+Lesson: Fundamentals of IP Version 6 
+Objective: Introduction to IPv6
+
+
+A company implements a TCP/IP network, with PC1 sitting on an Ethernet LAN. Which of the following protocols and features requires PC1 to learn information from some other server device?
+A None of these answers is correct. 
+B ARP 
+C ping 
+D DNS
+
+Explanation: Answer D is correct.
+
+Address Resolution Protocol (ARP) does allow PC1 to learn information, but the information is not stored on a server. The ping command does let the user at PC1 learn whether packets can flow in the network, but it again does not use a server. With the Domain Name System (DNS), PC1 acts as a DNS client, relying on a DNS server to respond with information about the IP addresses that match a given hostname. 
+Lesson: Fundamentals of IPv4 Addressing and Routing 
+Objective: Other Network Layer Features
+
+
+Which of the following header fields identify which TCP/IP application gets data received by the computer? (Choose two answers.)
+A SNAP Protocol Type 
+B Ethernet Type 
+C UDP Port Number 
+D TCP Port Number 
+E IP Protocol
+
+Explanation: Answers C and D are correct.
+
+Many headers include a field that identifies the next header that follows inside a message. Ethernet uses the Ethernet Type field, and the IP header uses the Protocol field. The TCP and UDP headers identify the application that should receive the data that follows the TCP or UDP header by using the port number field in the TCP and UDP headers, respectively. 
+Lesson: Fundamentals of TCP/IP Transport and Applications 
+Objective: TCP/IP Layer 4 Protocols: TCP and UDP
+
+
+What do you call data that includes the Layer 4 protocol header, and data given to Layer 4 by the upper layers, not including any headers and trailers from Layers 1 to 3? (Choose two answers.)
+
+A Packet 
+B Frame 
+C L4PDU 
+D L3PDU 
+E Chunk 
+F Segment
+
+Explanation: Answers C and F are correct.
+
+The terms packet and L3PDU refer to the header plus data encapsulated by Layer 3. Frame and L2PDU refer to the header (and trailer), plus the data encapsulated by Layer 2. Segment and L4PDU refer to header and data encapsulated by the transport layer protocol. 
+Lesson: Fundamentals of TCP/IP Transport and Applications 
+Objective: TCP/IP Layer 4 Protocols: TCP and UDP
+
+
+Which of the following are true about a LAN-connected TCP/IP host and its IP routing (forwarding) choices? (Choose two answers.)
+
+A The host always sends packets to its default gateway. 
+B The host sends packets to its default gateway if the destination IP address is in a different class of IP network than the host. 
+C The host sends packets to its default gateway if the destination IP address is in a different subnet than the host. 
+D The host sends packets to its default gateway if the destination IP address is in the same subnet as the host.
+
+Explanation: Answers B and C are correct.
+
+IPv4 hosts generally use basic two-branch logic. To send an IP packet to another host on the same IP network or subnet that is on the same LAN, the sender sends the IP packet directly to that host. Otherwise, the sender sends the packet to its default router (also called the default gateway). 
+Lesson: Fundamentals of IPv4 Addressing and Routing 
+Objective: IPv4 Routing
+
+
+
+A Cisco Catalyst switch has 24 10/100 ports, numbered 0/1 through 0/24. Ten PCs connect to the ten lowest numbered port, with those PCs working and sending data over the network. The other ports are not connected to any device. Which of the following answers lists facts displayed by the show interfaces status command?
+
+A Port Ethernet 0/15 is in a not connected state. 
+B Port Ethernet 0/1 is in a connected state. 
+C Port Fast Ethernet 0/11 is in a connected state. 
+D Port Fast Ethernet 0/5 is in a connected state.
+
+Explanation: Answer D is correct.
+
+The show interfaces status command lists one line of output per interface. Cisco Catalyst switches name the type of interface based on the fastest speed of the interface, so 10/100 interfaces would be Fast Ethernet. With a working connection, ports from FastEthernet 0/1 through 0/10 would be listed in a connected state, while the rest would be listed in a not connected state. 
+Lesson: Analyzing Ethernet LAN Switching 
+Objective: Verifying and Analyzing Ethernet Switching
+
+
+In the cabling for a leased line, which of the following typically connects to a four-wire line provided by a telco?
+
+A Router serial interface without internal CSU/DSU 
+B CSU/DSU 
+C Router serial interface with internal transceiver 
+D Switch serial interface
+
+Explanation: Answer B is correct.
+
+The four-wire circuit cable supplied by the telco connects to the device acting as the CSU/DSU. That can be an external CSU/DSU or a CSU/DSU integrated into a router serial interface card. LAN switches do not have serial interfaces, and router serial interfaces do not have transceivers. 
+Lesson: Fundamentals of WANs 
+Objective: Leased-Line WANs
+
+
+In a two-tier campus LAN design, which of the following are typically true of the topology design? (Choose two answers.)
+
+A The design uses a partial mesh of links between access and distribution switches 
+B The design uses a full mesh of links between access and distribution switches 
+C The end user and server devices connect directly to access layer switches 
+D The design uses a partial mesh of links between the distribution and core switches
+
+Explanation: Answers A and C are correct.
+
+The access layer switches play the role of connecting to the endpoint devices, whether they are end-user devices or servers. Then, from the access to the distribution layer, each access layer connects to two distribution switches typically, but with no direct connections between access layer switches, creating a mesh, but a partial mesh. A two-tier design, also called a collapsed core, does not use core switches at all. 
+Lesson: Analyzing Ethernet LAN Designs 
+Objective: Analyzing Campus LAN Topologies
+
+
+Which of the following commands identify switch interfaces as being trunking interfaces: interfaces that currently operate as VLAN trunks? (Choose two answers.)
+
+A show trunks 
+B show interfaces 
+C show interfaces switchport 
+D show interfaces trunk 
+
+Explanation: Answers C and D are correct.
+
+The show interfaces switchport command lists both the administrative and operational status of each port. When a switch considers a port to be trunking, this command lists an operational trunking state of "trunk." The show interfaces trunk command lists a set of interfaces: the interfaces that are currently operating as trunks. So, both these commands identify interfaces that are operational trunks. 
+Lesson: Implementing Ethernet Virtual LANs 
+Objective: VLAN and VLAN Trunking Configuration and Verification
+
+
+Which one answer gives the strongest match between one part of a typical three-tier design with the idea behind the listed generic topology design term?
+
+A The access layer looks like a partial mesh. 
+B The access layer looks like a star design. 
+C The distribution layer looks like a hybrid design. 
+D The distribution layer looks like a full mesh. 
+
+Explanation: Answer B is correct.
+
+The access layer uses access switches, which connect to endpoint devices. A single access switch with its endpoint devices looks like a star topology. The distribution layer creates a partial mesh of links between the distribution switches and access switches, so it is neither a full mesh nor a hybrid. 
+Lesson: Analyzing Ethernet LAN Designs 
+Objective: Analyzing Campus LAN Topologies
+
+
+Which of the following statements best describes what a switch does with a frame destined for an unknown unicast address?
+
+A It forwards out all interfaces in the same VLAN except for the incoming interface. 
+B It forwards the frame out the one interface identified by the matching entry in the MAC address table.
+C It compares the destination IP address to the destination MAC address. 
+D It compares the frame's incoming interface to the source MAC entry in the MAC address table.
+
+Explanation: Answer A is correct.
+
+A switch floods broadcast frames, multicast frames (if no multicast optimizations are enabled), and unknown unicast destination frames (frames whose destination MAC address is not in the MAC address table). 
+Lesson: Analyzing Ethernet LAN Switching 
+Objective: LAN Switching Concepts
+
+
+Which of the following Internet access technologies, used to connect a site to an ISP, offers asymmetric speeds? (Choose two answers.)
+
+A BGP 
+B Cable Internet 
+C DSL 
+D Leased lines 
+
+Explanation: Answers B and C are correct.
+
+Leased lines transmit data at the same speed in both directions, making it a symmetric service. DSL and cable Internet offer asymmetric speeds, with a faster downstream speed. BGP is a routing protocol and is not an Internet access technology. 
+Lesson: Fundamentals of WANs 
+Objective: Accessing the Internet
+
+
+Two routers, R1 and R2, connect using an Ethernet over MPLS service. The service provides point-to-point service between these two routers only, as a Layer 2 Ethernet service. Which of the following are the most likely to be true about this WAN? (Choose two answers.)
+
+A R1 will forward data-link frames to R2 using an Ethernet header/trailer. 
+B R1 will connect to a physical Ethernet link, with the other end of the cable connected to R2 
+C R1 will connect to a physical Ethernet link, with the other end of the cable connected to a device at the WAN service provider point of presence. 
+D R1 will forward data-link frames to R2 using an HDLC header/trailer. 
+
+Explanation: Answers A and C are correct.
+
+The physical installation uses a model in which each router uses a physical Ethernet link to connect to some SP device in an SP facility called a point of presence (PoP). The Ethernet link does not span from each customer device to the other. From a data-link perspective, both routers use the same Ethernet standard header and trailer used on LANs; HDLC does not matter on these Ethernet WAN links. 
+Lesson: Fundamentals of WANs 
+Objective: Ethernet as a WAN Technology
+
+
+Switch SW1 sends a frame to switch SW2 using 802.1Q trunking. Which of the answers describes how SW1 changes or adds to the Ethernet frame before forwarding the frame to SW2?
+
+A None of the other answers are correct. 
+B Encapsulates the original frame behind an entirely-new Ethernet header 
+C Inserts a 4-byte header and does not change the MAC addresses 
+D Inserts a 4-byte header and does change the MAC addresses 
+
+Explanation: Answer C is correct.
+
+802.1Q defines a 4-byte header, inserted after the original frame's destination and source MAC address fields. The insertion of this header does not change the original frame's source or destination address. The header itself holds a 12-bit VLAN ID field, which identifies the VLAN associated with the frame. 
+Lesson: Implementing Ethernet Virtual LANs 
+Objective: Virtual LAN Concepts
+
+Which of the following devices would be in the same broadcast domain as PC1? (Choose three answers.)
+
+A PC3, which is separated from PC1 by a transparent bridge 
+B PC4, which is separated from PC1 by an Ethernet switch 
+C PC5, which is separated from PC1 by a router 
+D PC2, which is separated from PC1 by an Ethernet hub 
+
+Explanation: Answers A, B, and D are correct.
+
+A broadcast domain contains all devices whose sent broadcast frames should be delivered to all the other devices in the domain. Hubs, repeaters, bridges, and switches do not separate or segment a LAN into multiple broadcast domains, whereas routers do. 
+Lesson: Analyzing Ethernet LAN Designs 
+Objective: Analyzing Collision Domains and Broadcast Domains
+
+
+
+A Class B network needs to be subnetted such that it supports 100 subnets and 100 hosts/subnet. Which of the following answers list a workable combination for the number of network, subnet, and host bits? (Choose two answers.)
+A Network = 8, subnet = 7, host = 17
+B Network = 16, subnet = 7, host = 7
+C Network = 16, subnet = 8, host = 8
+D Network = 16, subnet = 9, host = 7
+
+Explanation: Answers C and D are correct.
+
+At least 7 subnet bits are needed, because 26 = 64, so 6 subnet bits could not number 100 different subnets. Seven subnet bits could, because 27 = 128 => 100. Similarly, 6 host bits is not enough, because 26 − 2 = 62, but 7 host bits is enough, because 27 − 2 = 126 => 100.
+
+The number of network, subnet, and host bits must total 32 bits, making one of the answers incorrect. The answer with 8 network bits cannot be correct because the question states that a Class B network is used, so the number of network bits must always be 16. The two correct answers have 16 network bits (required because the question states the use of a Class B network), and at least 7 subnet and host bits each.
+Lesson: Perspectives on IPv4 Subnetting
+Objective: Analyze Subnetting and Addressing Needs
+
+
+Switch SW1 uses its Gigabit 0/1 interface to connect to switch SW2's Gigabit 0/2 interface. SW2's Gi0/2 interface is configured with the speed 1000 and duplex full commands. SW1 uses all defaults for interface configuration commands on its Gi0/1 interface. Which of the following are true about the link after it comes up? (Choose two answers.)
+
+A The link runs at 1 Gbps, but SW1 uses half-duplex and SW2 uses full duplex.
+B Both switches use full duplex.
+C The link works at 1000 Mbps (1 Gbps).
+D SW1 attempts to run at 10 Mbps because SW2 has effectively disabled IEEE standard autonegotiation.
+
+Explanation: Answers B and C are correct.
+
+SW2 has effectively disabled IEEE standard autonegotiation by configuring both speed and duplex. However, Cisco switches can detect the speed used by the other device, even with autonegotiation turned off. Also, at 1 Gbps, the IEEE autonegotiation standard says to use full duplex. If the duplex setting cannot be negotiated, so both ends use 1 Gbps, full duplex.
+Lesson: Troubleshooting Ethernet LANs
+Objective: Analyzing Switch Interface Status and Statistics
+
+
+In the following line taken from a show interfaces fa0/1 command, which of the following are true about the interface? (Choose two answers.)
+
+A The speed was definitely configured with the speed 100 interface subcommand.
+B The speed might have been configured with the speed 100 interface subcommand.
+C The duplex was definitely configured with the duplex full interface subcommand.
+D The duplex might have been configured with the duplex full interface subcommand.
+
+Explanation: Answers B and D are correct.
+
+The show interfaces command lists the actual speed and duplex setting, but it does not imply anything about how the settings were configured or negotiated. The show interfaces status command lists a prefix of a- in front of the speed and duplex setting to imply that the setting was autonegotiated, leaving off this prefix if the setting was configured.
+Lesson: Troubleshooting Ethernet LANs
+Objective: Analyzing Switch Interface Status and Statistics
+
+Which of the following are public IP networks? (Choose three answers.)
+
+A 172.30.0.0
+B 9.0.0.0
+C 1.0.0.0
+D 192.1.168.0
+E 192.168.255.0
+
+Explanation: Answers B, C, and D are correct.
+
+
+The private IPv4 networks, defined by RFC 1918, are Class A network 10.0.0.0, the 16 Class B networks from 172.16.0.0 to 172.31.0.0, and the 256 Class C networks that begin with 192.168. The three correct answers are from the public IP network range, and none are reserved values.
+Lesson: Perspectives on IPv4 Subnetting
+Objective: Make Design Choices
+
+On a Cisco Catalyst switch, you issue a show mac address-table command. Which of the following answers list information you would likely see in most lines of output? (Choose two answers.)
+
+A Type (broadcast, multicast, or unicast)
+B A MAC address
+C An IP address
+D A VLAN ID
+
+Explanation: Answers B and D are correct.
+
+The show mac address-table command lists all entries in the switch's MAC address table, including dynamically learned and statically defined addresses. From left to right, the output lists the VLAN ID, the MAC address, the type (static or dynamic), and the associated ports (out which frames sent to the listed address will be forwarded by this switch).
+Lesson: Troubleshooting Ethernet LANs
+Objective: Predicting Where Switches Will Forward Frames
+
+Which of the following are true about IP address 172.16.99.45's IP network? (Choose two answers.)
+
+A The default mask for the network is 255.255.255.0.
+B The network is a Class B network.
+C The network ID is 172.0.0.0.
+D The number of host bits in the unsubnetted network is 16.
+
+Explanation: Answers B and D are correct.
+
+The first octet (172) is in the range of values for Class B addresses (128-191). As a result, the network ID can be formed by copying the first two octets (172.16) and writing 0s for the last two octets (172.16.0.0). The default mask for all Class B networks is 255.255.0.0, and the number of host bits in all unsubnetted Class B networks is 16.
+Lesson: Analyzing Classful IPv4 Networks
+Objective: Classful Network Concepts
+
+
+Which of the following is a network broadcast address?
+
+A 192.168.255.1
+B 224.1.1.255
+C 172.30.255.255
+D 10.1.255.255
+
+Explanation: Answer C is correct.
+
+To find the network broadcast address, first determine the class, and then determine the number of host octets. At that point, convert the host octets to 255 to create the network broadcast address. In this case, 10.1.255.255 is in a Class A network, with the last three octets as host octets, for a network broadcast address of 10.255.255.255. For 192.168.255.1, it is a Class C address, with the last octet as the host part, for a network broadcast address of 192.168.255.255. Address 224.1.1.255 is a class D address, so it is not in any unicast IP network, so the question does not apply. For 172.30.255.255, it is a Class B address, with the last two octets as host octets, so the network broadcast address is 172.30.255.255.
+Lesson: Analyzing Classful IPv4 Networks
+Objective: Classful Network Concepts
+
+
+Why does the formula for the number of hosts per subnet (2H - 2) require the subtraction of two hosts?
+
+A To reserve two addresses for redundant default gateways (routers)
+B To reserve the two addresses required for DHCP operation
+C To reserve addresses for the subnet ID and default gateway (router)
+D To reserve addresses for the subnet broadcast address and subnet ID
+
+Explanation: Answer D is correct.
+
+By definition, two address values in every IPv4 subnet cannot be used as host IPv4 addresses: the first (lowest) numeric value in the subnet for the subnet ID, and the last (highest) numeric value in the subnet for the subnet broadcast address.
+Lesson: Perspectives on IPv4 Subnetting
+Objective: Analyze Subnetting and Addressing Needs
+
+Which of the following are true about IP address 192.168.6.7's IP network? (Choose two answers.)
+
+A The number of host bits in the unsubnetted network is 16.
+B The default mask for the network is 255.255.255.0.
+C The network is a Class B network.
+D The network ID is 192.168.6.0.
+
+Explanation: Answers B and D are correct.
+
+The first octet (192) is in the range of values for Class C addresses (192-223). As a result, the network ID can be formed by copying the first three octets (192.168.6) and writing 0 for the last octet (192.168.6.0). The default mask for all Class C networks is 255.255.255.0, and the number of host bits in all unsubnetted Class C networks is 8.
+Lesson: Analyzing Classful IPv4 Networks
+Objective: Classful Network Concepts
+
+The show interfaces g0/1 switchport command on SW1 shows the trunking status on a link connected to switch SW2. Based on the output, which of the following must be true on SW2's port connected to this link?
+
+A SW2 can use the switchport mode dynamic auto configuration command as one option to make the link use trunking.
+B The operational state per show interfaces switchport must be "trunk."
+C The administrative state per show interfaces switchport must be "trunk."
+D SW2 must use the switchport mode trunk configuration command on G0/2, or the link will not use trunking.
+
+Explanation: Answer A is correct.
+
+The show interface switchport command lists a switch's configured value of the switchport mode command as the administrative mode, telling us that SW1 uses the switchport mode trunk configuration command. The operation state shows the current working state (trunk). Of the four answers, one incorrect answer claims that SW2's operational state must also be "trunk"; however, one switch can use trunking, while the other does not. Another answer claims that the administrative mode must be "trunk," which basically means that the command switchport mode trunk must be used. However, SW2 has a few other configuration options that would work, like the switchport mode dynamic desirable and switchport mode dynamic auto commands, with the correct answer referring to one of those commands (the switchport mode dynamic auto command).
+Lesson: Troubleshooting Ethernet LANs
+Objective: Analyzing VLANs and VLAN Trunks
+
+
+Which of the following statements is true about classless IP addressing concepts?
+
+A Uses a 128-bit IP address
+B Applies only for Class A and B networks
+C Separates IP addresses into network, subnet, and host parts
+D Ignores Class A, B, and C network rules
+
+Explanation: Answer D is correct.
+
+Classless addressing rules define a two-part IP address structure: the prefix and the host part. This logic ignores Class A, B, and C rules, and can be applied to the 32-bit IPv4 addresses from any address class. By ignoring Class A, B, and C rules, classless addressing ignores any distinction as to the network part of an IPv4 address.
+Lesson: Analyzing Subnet Masks
+Objective: Subnet Mask Conversion
+
+Which of the following is the resident subnet for IP address 192.168.44.97/30?
+
+A 192.168.44.128
+B 192.168.44.96
+C 192.168.44.64
+D 192.168.44.0
+
+Explanation: Answer B is correct.
+
+First, the resident subnet (the subnet ID of the subnet in which the address resides) must be numerically smaller than the IP address, which rules out one of the answers. The mask converts to 255.255.255.252. As such, you can copy the first three octets of the IP address because of their value of 255. For the fourth octet, the subnet ID value must be a multiple of 4, because 256 − 252 (mask) = 4. Those multiples include 96 and 100, and the right choice is the multiple closest to the IP address value in that octet (97) without going over. So, the correct subnet ID is 192.168.44.96.
+Lesson: Analyzing Existing Subnets
+Objective: Defining a Subnet
+
+A Layer 3 switch has been configured to route IP packets between VLANs 1, 2, and 3, which connect to subnets 172.20.1.0/25, 172.20.2.0/25, and 172.20.3.0/25, respectively. The engineer issues a show ip route command on the Layer 3 switch, listing the connected routes. Which of the following answers lists a piece of information that should be in at least one of the routes?
+
+A Interface Gigabit Ethernet 0/0.3
+B Next-hop router 172.20.4.1
+C Interface VLAN 2
+D Mask 255.255.255.0
+
+Explanation: Answer C is correct.
+
+The configuration of the Layer 3 switch's routing feature uses VLAN interfaces, with the interface number matching the VLAN ID. The matching connected routes, like all connected IP routes, will list the interfaces but not a next-hop IP address. The three connected routes will list the VLAN interfaces 1, 2, and 3, respectively.
+Lesson: Configuring IPv4 Addresses and Static Routes
+Objective: Configuring IP Addresses and Connected Routes
+
+When thinking about an IP address using classful addressing rules, an address can have three parts: network, subnet, and host. If you examined all the addresses in one subnet, in binary, which of the following answers correctly states which of the three parts of the addresses will be equal among all addresses? (Choose the best answer.)
+
+A Network and subnet parts
+B Host part only
+C Subnet part only
+D Network part only
+E Subnet and host parts
+
+
+Explanation: Answer A is correct.
+
+When using classful IP addressing concepts as described in Chapter 14, "Analyzing Subnet Masks," addresses have three parts: network, subnet, and host. For addresses in a single classful network, the network parts must be identical for the numbers to be in the same network. For addresses in the same subnet, both the network and subnet parts must have identical values. The host part differs when comparing different addresses in the same subnet.
+Lesson: Analyzing Existing Subnets
+Objective: Defining a Subnet
+
+Working at the help desk, you receive a call and learn a user's PC IP address and mask (192.168.9.1/27). When thinking about this using classful logic, you determine the number of network (N), subnet (S), and host (H) bits. Which of the following is true in this case?
+
+A H=8
+B H=7
+C N=24
+D S=24
+
+Explanation: Answer C is correct.
+
+The size of the network part is always either 8, 16, or 24 bits, based on whether it is Class A, B, or C, respectively. As a Class C address, N=24. The number of subnet bits is the difference between the prefix length (27) and N, so S=3 in this case. The size of the host part is a number that, when added to the prefix length (27), gives you 32, so H=5 in this case.
+Lesson: Analyzing Subnet Masks
+Objective: Identifying Subnet Design Choices Using Masks
+
+A PC user opens a command prompt and uses the ipconfig command to see that the PC's IP address and mask are 192.168.4.77 and 255.255.255.224. The user then runs a test using the ping 192.168.4.117 command. Which of the following answers is the most likely to happen?
+
+A The PC sends packets to its default gateway.
+B The PC sends packets directly to the host with address 192.168.4.117.
+C The PC sends an ARP looking for the MAC address of the DHCP server.
+D The PC sends a DNS query for 192.168.4.117.
+
+Explanation: Answer A is correct.
+
+PCs use two-option logic: send local packets (destined for hosts in the same subnet) directly, and send remote packets (destined for hosts in other subnets) to the default gateway/router. In this case, the PC's own IP address is 192.168.4.77, with mask 255.255.255.224, so it is in subnet 192.168.4.64/27. This subnet has a range of addresses from 192.168.4.64 to 192.168.4.95, including the subnet and broadcast address. As a result, the PC sends the packet to its default gateway. As for the other incorrect answers, if the ping command had used a hostname, it would have first asked a DNS server to resolve the name. Also, the PC already has an IP address, so DHCP would not be needed.
+Lesson: Configuring IPv4 Addresses and Static Routes
+Objective: IP Routing
+
+Which of the following answers lists the dotted-decimal notation (DDN) equivalent of /30?
+
+A 255.255.255.0
+B 255.255.254.0
+C 255.255.255.240
+D 255.255.255.252
+E 255.255.255.192
+
+Explanation: Answer D is correct.
+
+/30 is the equivalent of the mask that in binary has 30 binary 1s. To convert that to DDN format, write down all the binary 1s (30 in this case), followed by binary 0s for the remainder of the 32-bit mask. Then take 8 bits at a time, and convert from binary to decimal (or memorize the nine possible DDN mask octet values and their binary equivalents). Using the /30 mask in this question, the binary mask is 11111111 11111111 11111111 11111100. Each of the first three octets is all binary 1s, so each converts to 255. The last octet, 11111100, converts to 252, for a DDN mask of 255.255.255.252. See Appendix A for a decimal/binary conversion table.
+Lesson: Analyzing Subnet Masks
+Objective: Subnet Mask Conversion
+
+Which of the following commands correctly configures a static route?
+
+A ip route 10.1.3.0 serial 0
+B ip route 10.1.3.0 /24 10.1.130.253
+C ip route 10.1.3.0 /24 serial 0
+D ip route 10.1.3.0 255.255.255.0 10.1.130.253
+
+Explanation: Answer D is correct.
+
+The correct syntax lists a subnet number, then a subnet mask in dotted-decimal form, and then either an outgoing interface or a next-hop IP address.
+Lesson: Configuring IPv4 Addresses and Static Routes
+Objective: Configuring Static Routes
+
+A packet is sent to a destination address. That single packet is replicated by a few routers based on the routers’ knowledge of hosts that had earlier registered to receive packets sent to that destination address. The routers do not forward copies of the packet onto subnets where no hosts have registered, and do forward copies of the packet onto subnets where at least one host has registered to receive those packets. Which of the following IP address types was used as the destination IP address?
+
+A A multicast address
+B A subnet broadcast address
+C A network broadcast address
+D A unicast address
+
+Explanation: Answer A is correct.
+
+By definition, a multicast IP packet (a packet sent to a Class D IP multicast address) is copied as necessary by routers to make extra copies, and forwarded to multiple routers as needed, but not all. The logic revolves around prior knowledge of a host registration process by which hosts declare their interest in receiving packets sent to a particular multicast IP address. Routers exchange this information, so that when a new multicast packet arrives, the routers know where to send copies of that particular multicast packet, and where to not bother to send the packet (because no hosts in that part of the network registered to receive a copy).
+
+A unicast packet would not be forwarded as a data link broadcast at the last step.
+
+A network broadcast would be replicated by different routers as needed so that it was delivered to all subnets in the classful network.
+
+A subnet broadcast would be router as a single packet to the final router in the path. That router would then forward the IP packet as a LAN broadcast so that all hosts in that subnet would receive a copy.
+Lesson: DHCP and IP Networking on Hosts
+Objective: IPv4 Address Types
+
+A PC connects to a LAN and uses DHCP to lease an IP address for the first time. Of the usual four DHCP messages that flow between the PC and the DHCP server, which ones do the client send? (Choose two answers.)
+
+A Offer
+B Discover
+C Acknowledgment
+D Request
+
+Explanation: Answers B and D are correct.
+
+The client sends a Discover message, with the server returning an Offer message. The client then sends a Request, with the server sending back the IP address in the Acknowledgment message.
+Lesson: DHCP and IP Networking on Hosts
+Objective: Implementing and Troubleshooting DHCP
+
+
+
+R1 has configured interface Fa0/0 with the ip address 10.5.48.1 255.255.240.0 command. Which of the following subnets, when configured on another interface on R1, would not be considered an overlapping subnet?
+
+A 10.5.0.0 255.255.240.0
+B 10.4.0.0 255.254.0.0
+C 10.5.32.0 255.255.224.0
+D 10.5.0.0 255.255.128.0
+
+Explanation: Answer A is correct.
+
+Subnet 10.5.0.0 255.255.240.0 implies range 10.5.0.0-10.5.15.255, which does not overlap. 10.4.0.0 255.254.0.0 implies range 10.4.0.0-10.5.255.255, which does overlap. 10.5.32.0 255.255.224.0 implies range 10.5.32.0-10.5.63.255, which does overlap. 10.5.0.0 255.255.128.0 implies range 10.5.0.0-10.5.127.255, which does overlap.
+Lesson: Variable-Length Subnet Masks
+Objective: Finding VLSM Overlaps
+
+An IP subnetting design requires 200 subnets and 120 hosts/subnet for the largest subnets, and requires that a single mask be used throughout the one private IP network that will be used. The design also requires planning for 20 percent growth in the number of subnets and number of hosts/subnet in the largest subnet. Which of the following answers lists a private IP network and mask that, if chosen, would meet the requirements?
+
+A 192.168.7.0/24
+B 10.0.0.0/25
+C 10.0.0.0/22
+D 172.16.0.0/23
+
+Explanation: Answer C is correct.
+
+With a growth of 20 percent, the design needs to support 240 subnets. To meet that need, 7 subnet bits do not meet the need (27 = 128), but 8 subnet bits do meet the need (28 = 256). Similarly, the minimum number of host bits is also 8, because the need, after the 20 percent growth, would be 144 hosts/subnet. That number requires 8 host bits (28 - 2 = 254). These numbers are minimum numbers of subnet and host bits.
+
+The right answer, 10.0.0.0/22, has 8 network bits because the network class is Class A, 14 subnet bits (/22 - 8 = 14), and 10 host bits (32 - 22 = 10). This mask supplies at least 8 subnet bits and at least 8 host bits. The masks in the other answers either do not supply at least 8 host bits or do not supply at least 8 subnet bits.
+Lesson: Subnet Design
+Objective: Choosing the Mask(s) to Meet Requirements
+
+An engineer has planned to use Class B network 172.19.0.0 and a single subnet mask throughout the network. The answers list the masks considered by the engineer. Choose the mask that, among the answers, supplies the largest number of hosts per subnet, while also supplying enough subnet bits to support 1000 subnets.
+
+A 255.255.252.0
+B /28
+C 255.255.255.0
+D /26
+
+Explanation: Answer D is correct.
+
+To support 1000 subnets, 10 subnet bits (210 = 1024) are needed. The design uses a Class B network, which means that 16 network bits exist as well. So, the shortest mask that meets the requirements is 255.255.255.192, or /26, comprised of 16 network plus 10 subnet bits. The /28 answer also supplies enough subnets to meet the need, but compared to /26, /28 supplies fewer host bits and so fewer hosts/subnet.
+Lesson: Subnet Design
+Objective: Finding All Subnet IDs
+
+Which of the following routing protocols support VLSM? (Choose three answers.)
+
+A RIPv2
+B RIPv1
+C OSPF
+D EIGRP
+
+Explanation: Answers A, C, and D are correct.
+
+Classless routing protocols, by definition, support VLSM because classless routing protocols transmit the subnet mask in their routing updates. Of the listed answers, only RIP version 1 (RIPv1) is not a classless routing protocol.
+Lesson: Variable-Length Subnet Masks
+Objective: VLSM Concepts and Configuration
+
+Which of the following are valid subnet IDs for network 192.168.9.0, using mask /29, assuming that mask /29 is used throughout the network?
+
+A 192.168.9.242
+B 192.168.9.58
+C 192.168.9.144
+D 192.168.9.9
+
+Explanation: Answer C is correct.
+
+The first (numerically lowest) subnet ID is the same number as the classful network number, or 192.168.9.0. The remaining subnet IDs are each 8 larger than the previous subnet ID, in sequence, or 192.168.9.8, 192.168.9.16, 192.168.9.24, 192.168.9.32, and so on, through 192.168.9.248.
+Lesson: Subnet Design
+Objective: Finding All Subnet IDs
+An engineer has calculated the list of subnet IDs, in consecutive order, for network 172.30.0.0, assuming that the /22 mask is used throughout the network. Which of the following are true? (Choose two answers.)
+
+A Any two consecutive subnet IDs differ by a value of 22 in the third octet.
+B Any two consecutive subnet IDs differ by a value of 16 in the fourth octet.
+C The list contains 64 subnet IDs.
+D The last subnet ID is 172.30.252.0.
+
+Explanation: Answers C and D are correct.
+
+The mask converts to 255.255.252.0, so the difference from subnet ID to subnet ID (called the magic number in this chapter) is 256 - 252 = 4. So, the subnet IDs start with 172.30.0.0, then 172.30.4.0, then 172.30.8.0, and so on, adding 4 to the third octet. The mask, used with a Class B network, implies 6 subnet bits, for 64 total subnet IDs. The last of these, 172.30.252.0, can be recognized in part because the third octet, where the subnet bits sit, has the same value as the mask in that third octet.
+Lesson: Subnet Design
+Objective: Finding All Subnet IDs
+
+What does the acronym VLSM stand for?
+
+A Vector-length subnet mask
+B Vector loop subnet mask
+C Variable-length subnet mask
+D Very long subnet mask
+E Vociferous longitudinal subnet mask
+
+Explanation: Answer C is correct.
+
+Note that sometimes VLSM stands for variable-length subnet masking, which refers to the process of using different masks in the same classful network, whereas variable-length subnet mask refers to the subnet masks themselves.
+Lesson: Variable-Length Subnet Masks
+Objective: VLSM Concepts and Configuration
+
+R4 has a connected route for 172.16.8.0/22. Which of the following answers lists a subnet that overlaps with this subnet?
+
+A 172.16.6.0/23
+B 172.16.16.0/20
+C 172.16.11.0/25
+D 172.16.0.0/21
+
+Explanation: Answer C is correct.
+
+The four answers imply the following ranges: 172.16.0.0/21: 172.16.0.0-172.16.7.255. 172.16.6.0/23: 172.16.6.0-172.16.7.255. 172.16.16.0/20: 172.16.16.0-172.16.31.255. 172.16.11.0/25: 172.16.11.0-172.16.11.127. The subnet in the question, 172.16.8.0/22, implies a range of 172.16.8.0-172.16.11.255, which includes the range of numbers in subnet 172.16.11.0/25.
+Lesson: Variable-Length Subnet Masks
+Objective: Finding VLSM Overlaps
+
+A design already includes subnets 192.168.1.0/26, 192.168.1.128/30, and 192.168.1.160/29. Which of the following subnets is the numerically lowest subnet ID that could be added to the design, if you wanted to add a subnet that uses a /28 mask?
+
+A 192.168.1.64/28
+B 192.168.1.112/28
+C 192.168.1.144/28
+D 192.168.1.96/28
+E 192.168.1.80/28
+
+Explanation: Answer A is correct.
+
+The question lists three existing subnets, which together consume part of Class C network 192.168.1.0. Just listing the last octet values, these subnets consume 0-63, 128-131, and 160-167. The new subnet, with a /28 mask, needs 16 consecutive numbers, and the subnet numbers will all be a multiple of 16 in the last octet (0, 16, 32, and so on). Looking at the consumed numbers again, the first opening starts at 64 and runs up through 127, so it has more than enough space for 16 addresses. So the numerically lowest subnet number is 192.168.1.64/28, with range 192.168.1.64 - 192.168.1.79.
+Lesson: Variable-Length Subnet Masks
+Objective: Adding a New Subnet to an Existing VLSM Design
+
+Which of the following is not a valid subnet ID for network 172.19.0.0, using mask /24, assuming that mask /24 is used throughout the network?
+
+A 172.19.255.0
+B 172.19.1.0
+C 172.19.0.0
+D 172.19.0.16
+
+Explanation: Answer D is correct.
+
+Using mask /24 (255.255.255.0), the subnet IDs increment by 1 in the third octet. The reasoning is that with a Class B network, 16 network bits exist, and with mask /24, the next 8 bits are subnet bits, so the entire third octet contains subnet bits. All the subnet IDs will have a 0 as the last octet, because the entire fourth octet consists of host bits. Note that 172.19.0.0 (the zero subnet) and 172.19.255.0 (the broadcast subnet) might look odd, but are valid subnet IDs.
+Lesson: Subnet Design
+Objective: Finding All Subnet IDs
+
+Which of the following wildcard masks is most useful for matching all IP packets in subnet 10.1.128.0, mask 255.255.255.0?
+
+A 0.0.15.0
+B 0.0.0.255
+C 0.0.0.240
+D 0.0.0.31
+E 0.0.0.0
+F 0.0.248.255
+
+Explanation: Answer B is correct.
+
+0.0.0.255 matches all packets that have the same first three octets. This is useful when you want to match a subnet in which the subnet part comprises the first three octets, as in this case.
+Lesson: Basic IPv4 Access Control Lists
+Objective: Standard Numbered IPv4 ACLs
+
+Users are complaining about not being able to reach the Internet. Which of the following is the most likely cause?
+
+A The problem is not related to NAT, based on the information in the command output.
+B The NAT pool does not have enough entries to satisfy all requests.
+C Standard ACL 1 cannot be used; an extended ACL must be used.
+D The command output does not supply enough information to identify the problem.
+
+Explanation: Answer B is correct.
+
+The last line mentions that the pool has seven addresses, with all seven allocated, with the misses counter close to 1000 - meaning that close to 1000 new flows were rejected because of insufficient space in the NAT pool.
+Lesson: Network Address Translation
+Objective: NAT Configuration and Troubleshooting
+
+Which of the following access-list commands permits packets going to any web client from all web servers whose IP addresses begin with 172.16.5?
+
+A access-list 2523 permit tcp 172.16.5.0 0.0.0.255 eq www any
+B access-list 2523 permit tcp 172.16.5.0 0.0.0.255 eq www 172.16.5.0 0.0.0.255
+C access-list 2523 permit tcp any eq www 172.16.5.0 0.0.0.255
+D access-list 1951 permit ip host 10.1.1.1 172.16.5.0 0.0.0.255 eq www
+E access-list 101 permit tcp host 10.1.1.1 172.16.5.0 0.0.0.255 eq www
+
+Explanation: Answer A is correct.
+
+Because the packet is going toward any web client, you need to check for the web server’s port number as a source port. The client IP address range is not specified in the question, but the servers are, so the source address beginning with 172.16.5 is the correct answer.
+Lesson: Advanced IPv4 Access Control Lists
+Objective: Extended Numbered IP Access Control Lists
+
+An engineer is considering configuring an ACL on router R1. The engineer could use ACL A which would be enabled with the ip access-group A out command on interface G0/1, or ACL B, which would be enabled with the ip access-group B in command on that same interface. R1’s G0/1 interface uses IPv4 address 1.1.1.1. Which of the answers is true when comparing these options? (Choose two answers.)
+
+A ACL B creates more risk of filtering important overhead traffic than ACL A.
+B A ping 1.1.1.1 command on R1 would bypass ACL A even if enabled.
+C A ping 1.1.1.1 command on R1 would bypass ACL B even if enabled.
+D ACL A creates more risk of filtering important overhead traffic than ACL B.
+
+Explanation: Answers A and B are correct.
+
+A router bypasses the ACL logic for its own outbound ACLs for packets created by that router. Routers do not make any kind of exception for inbound packets. As a result, ACL B creates more risk than ACL A, because B is enabled as an inbound ACL.
+
+The ping 1.1.1.1 command in two answers is a self-ping of a router’s Ethernet interface. As a result, the router would bypass any outbound ACL logic on that interface, but consider any inbound ACL logic. So router R1 would bypass the logic of ACL A, which would be enabled as an outbound ACL on R1’s G0/1 interface. 
+Lesson: Advanced IPv4 Access Control Lists
+Objective: Troubleshooting with IPv4 ACLs
+
+Which of the following wildcard masks is most useful for matching all IP packets in subnet 10.1.128.0, mask 255.255.240.0?
+A 0.0.15.255
+B 0.0.0.255
+C 0.0.0.240
+D 0.0.0.31
+E 0.0.0.0
+F 0.0.248.255
+
+Explanation: Answer A is correct.
+
+0.0.15.255 matches all packets with the same first 20 bits. This is useful when you want to match a subnet in which the subnet part comprises the first 20 bits, as in this case.
+Lesson: Basic IPv4 Access Control Lists
+Objective: Standard Numbered IPv4 ACLs
+
+NAT has been configured to translate source addresses of packets for the inside part of the network, but only for some hosts as identified by an access control list. Which of the following commands indirectly identifies the hosts?
+A ip nat inside
+B ip nat pool barney 200.1.1.1 200.1.1.254 netmask 255.255.255.0
+C ip nat inside source list 1 pool barney
+D ip nat inside 200.1.1.1 200.1.1.2
+
+Explanation: Answer C is correct.
+
+The list 1 parameter references an IP ACL, which matches packets, identifying the inside local addresses.
+Lesson: Network Address Translation
+Objective: NAT Configuration and Troubleshooting
+
+Barney is a host with IP address 10.1.1.1 in subnet 10.1.1.0/24. Which of the following are things that a standard IP ACL could be configured to do? (Choose two answers.)
+
+A Match all IP addresses in Barney's subnet with one access-list command without matching other IP addresses.
+B Match IP addresses 10.1.1.1 through 10.1.1.4 with one access-list command without matching other IP addresses.
+C Match the exact source IP address.
+D Match only the packet's destination IP address.
+
+Explanation: Answers A and C are correct.
+
+Standard ACLs check the source IP address. The address range 10.1.1.1-10.1.1.4 can be matched by an ACL, but it requires multiple access-list commands. Matching all hosts in Barney's subnet can be accomplished with the access-list 1 permit 10.1.1.0 0.0.0.255 command.
+Lesson: Basic IPv4 Access Control Lists
+Objective: Standard Numbered IPv4 ACLs
+
+With static NAT, performing translation for inside addresses only, what causes NAT table entries to be created?
+
+A Configuration using the ip nat outside source command
+B Configuration using the ip nat inside source command
+C The first packet from the outside network to the inside network
+D The first packet from the inside network to the outside network
+
+Explanation: Answer B is correct.
+
+With static NAT, the entries are statically configured. Because the question mentions translation for inside addresses, the inside keyword is needed in the command.
+Lesson: Network Address Translation
+Objective: NAT Configuration and Troubleshooting
+
+An engineer configures an ACL but forgets to save the configuration. At that point, which of the following commands displays the configuration of an IPv4 ACL, including line numbers? (Choose two answers.) 
+A show startup-config
+B show ip access-lists
+C show access-lists
+D show running-config
+
+Explanation: Answers B and C are correct.
+
+The show ip access-lists and show access-lists commands both display the configuration of IPv4 access lists, including ACL line numbers. Neither the show running-config nor show startup-config commands list the ACL line numbers; in this case, the startup-config file would not contain the ACL configuration at all.
+Lesson: Advanced IPv4 Access Control Lists
+Objective: Troubleshooting with IPv4 ACLs
+
+With dynamic NAT, performing translation for inside addresses only, what causes NAT table entries to be created?
+
+A Configuration using the ip nat inside source command
+B Configuration using the ip nat outside source command
+C The first packet from the inside network to the outside network
+D The first packet from the outside network to the inside network
+
+Explanation: Answer C is correct.
+
+With dynamic NAT, the entries are created as a result of the first packet flow from the inside network.
+Lesson: Network Address Translation
+Objective: Network Address Translation Concepts
+
+
+Which of the following describes a way to disable IEEE standard autonegotiation on a 10/100 port on a Cisco switch?
+A Configure the negotiate disable interface subcommand
+B Configure the no negotiate interface subcommand
+C Configure the speed 100 interface subcommand
+D Configure the duplex half interface subcommand
+E Configure the duplex full interface subcommand
+F Configure the speed 100 and duplex full interface subcommands
+
+Explanation: Answer F is correct.
+
+Cisco switches do not have a command to disable autonegotiation of speed and duplex. Instead, a switch port that has both speed and duplex configured disables autonegotiation.
+Lesson: Configuring Switch Interfaces
+Objective: Configuring Switch Interfaces
+
+A single-line ACL has been added to a router configuration using the command ip access-list 1 permit 172.16.4.0 0.0.1.255. The configuration also includes the ip access-class 1 in command in VTY configuration mode. Which answer accurately describes how the router uses ACL 1?
+A Hosts in subnet 172.16.4.0/23 alone can log in but cannot reach enable mode of the router.
+B The router will only forward packets with source addresses in subnet 172.16.4.0/23.
+C Hosts in subnet 172.16.4.0/23 alone can telnet into the router.
+D CLI users cannot telnet from the router to hosts in subnet 172.16.4.0/23 alone.
+
+Explanation: Answer C is correct.
+
+The ip access-class 1 in command enables ACL 1 for processing inbound Telnet and SSH connections into that router, based on the source IP address of those incoming packets. It has no impact on Telnet or SSH attempts from the router to some other host. It has no impact on a user later reaching enable mode. It also has nothing to do with filtering packets that would otherwise be routed through the router. Note that the ACL matches all packets whose source IP address is in subnet 172.16.4.0/23, which includes the range of numbers from 172.16.4.0 to 172.16.5.255.
+Lesson: Device Security Features
+Objective: Cisco Device Hardening
+
+Which of the following answers describe the result of the port security configuration created with these commands? (Choose two answers.)
+A Prevents unknown devices with unknown MAC addresses from sending data through the switch ports
+B Will allow any one device to connect to each port, but will not save that device's MAC address into the startup-config
+C Will allow any one device to connect to each port, and will save that device's MAC address into the startup-config
+D If a user connects a switch to the cable, prevents multiple devices from sending data through the port
+
+Explanation: Answers B and D are correct.
+
+First, about the sticky parameter… this command causes the switch to learn the source MAC, and to add it to a switchport port-security mac-address address interface subcommand. However, port security adds that command to the running-config file; the network engineer must also issue a copy running-config startup-config EXEC command to save that configuration.
+
+About the other correct answer, users can connect a switch to the end of the cable, with multiple devices connected to that switch. That happens in real networks when users decide they need more ports at their desk. However, the default setting of switchport port-security maximum 1 means that a frame from the second unique source MAC address would cause a violation, and with the default violation action, to err-disable the port.
+
+For the other incorrect answer, the configuration does not prevent unknown MAC addresses from accessing the port, because the configuration does not predefine any MAC address.
+Lesson: Configuring Switch Interfaces
+Objective: Port Security
+
+Some IOS commands store passwords as clear text, but you can then encrypt the passwords with the service password-encryption global command. By comparison, other commands store a computed hash of the password, rather than storing the password. Comparing the two options, which one answer is the most accurate about why one method is better than the other?
+
+A Using hashes is preferred because encrypted IOS passwords can be easily decrypted.
+B Using hashes is preferred because of the large CPU effort required for encryption.
+C Using encryption is preferred because it provides stronger password protection.
+D Using encryption is preferred because of the large CPU effort required for hashes.
+
+Explanation: Answer A is correct.
+
+The service password-encryption command encrypts passwords on a router or switch that would otherwise be shown in clear text. While a great idea in concept, the algorithm can be easily broken using websites found in the Internet. Cisco long ago provided replacements for commands that store passwords as clear text, instead using hashes - commands like enable secret and username secret. These commands are preferred in part because they avoid the issues of clear-text passwords and easily decrypted passwords.
+Lesson: Device Security Features
+Objective: Securing IOS Passwords
+
+Imagine that you have configured the enable secret command, followed by the enable password command, from the console. You log out of the switch and log back in at the console. Which command defines the password that you had to enter to access privileged mode?
+
+A enable password
+B The password command, if it's configured
+C Neither
+D enable secret
+
+Explanation: Answer D is correct.
+
+If both commands are configured, IOS accepts only the password as configured in the enable secret command.
+Lesson: Device Security Features
+Objective: Securing IOS Passwords
+
+Which of the following is required when configuring port security with sticky learning?
+
+A Defining the specific allowed MAC addresses using the switchport port-security mac-address interface subcommand
+B All the other answers list required commands
+C Setting the maximum number of allowed MAC addresses on the interface with the switchport port-security maximum interface subcommand
+D Enabling port security with the switchport port-security interface subcommand
+
+Explanation: Answer D is correct.
+
+The setting for the maximum number of MAC addresses has a default of 1, so the switchport port-security maximum command does not have to be configured. With sticky learning, you do not need to predefine the specific MAC addresses either. However, you must enable port security, which requires the switchport port-security interface subcommand.
+Lesson: Configuring Switch Interfaces
+Objective: Port Security
+
+In which of the following modes of the CLI could you configure the duplex setting for interface Fast Ethernet 0/5?
+
+A Enable mode
+B Global configuration mode
+C VLAN mode
+D Interface configuration mode
+E User mode
+
+Explanation: Answer D is correct.
+
+Cisco switches can be configured for speed (with the speed command) and duplex (with the duplex command) in interface configuration mode.
+Lesson: Configuring Switch Interfaces
+Objective: Configuring Switch Interfaces
+
+A switch's port Gi0/1 has been correctly enabled with port security. The configuration sets the violation mode to restrict. A frame that violates the port security policy enters the interface, followed by a frame that does not. Which of the following answers correctly describe what happens in this scenario? (Choose two answers.)
+
+A The switch discards both the first and second frame.
+B The switch increments the violation counter for Gi0/1 by 1.
+C The switch generates syslog messages about the violating traffic for the first frame.
+D The switch puts the interface into an err-disabled state when the first frame arrives.
+
+Explanation: Answers B and C are correct.
+
+First, about the two incorrect answers: When in restrict mode, the arrival of a frame that violates the port security policy does not cause the switch to put the interface into err-disabled state. It does cause the switch to discard any frames that violate the policy, but it leaves the interface up, and does not discard frames that do not violate the security policy, like the second frame that arrives.
+
+Regarding the two correct answers, a port in port security restrict does cause the switch to issue log messages for a violating frame, send SNMP traps about that same event (if SNMP is configured), and to increment the counter of violating frames.
+Lesson: Configuring Switch Interfaces
+Objective: Port Security
+
+Which of the following is true about what occurs the next time a user logs in from the console?
+A No banner text is displayed.
+B The banner text "Login banner configured, no text defined" is displayed.
+C The banner text "this is the login banner" is displayed.
+D The banner text "his is " is displayed.
+
+Explanation: Answer D is correct.
+
+The first nonblank character after the banner login phrase is interpreted as the beginning delimiter character. In this case, it's the letter t. So, the second letter t - the first letter in "the" - is interpreted as the ending delimiter. The resulting login banner is the text between these two ts - namely, "his is ".
+Lesson: Device Security Features
+Objective: Cisco Device Hardening
+
+Which of the following is true about users of this router?
+A The router will hash the clear-text password that the user types to compare to the hashed password.
+B A no service password-encryption configuration command would decrypt this password.
+C The router will decrypt the password in the configuration to compare to the clear-text password typed by the user.
+D A user must type $1$ZGMA$e8cmvkz4UjiJhVp7.maLE1 to reach enable mode.
+
+Explanation: Answer A is correct.
+
+The enable secret command stores an MD5 hash of the password. It is unaffected by the service password-encryption command. The router does not unhash the value back to the clear-text password. Instead, when the user types her clear-text password, the router also hashes that password and compares that hashed value with the hashed value as listed in the configuration.
+Lesson: Device Security Features
+Objective: Securing IOS Passwords
+
+A user has sent a request to the server. What process does the server go through to determine what service is being requested by the user?
+A Encapsulation
+B De-encapsulation
+C Segmentation
+D Fragmentation
+E Data translation
+
+Explanation: Answer B is correct.
+
+As data is sent from a sender to a receiver, the sender encapsulates the data into segments, which are encapsulated into packets, then into frames, and then sent on the wire as bits. The receiver de-encapsulates the PDUs (in the reverse order) to determine what actual data that is being transmitted. Segmentation at Layer 4 is used to chop up large data blocks into smaller parts for transmission. Fragmentation at Layer 3 is used to take a packet that may otherwise be too large to be supported on a given network and chop up the packet into smaller packets for transmission. Data translation may be used at Layer 6 of the OSI model as devices negotiate and interpret the formats that are being used for the data that is being sent or received.
+Lesson: Introduction to TCP/IP Networking
+Objective: TCP/IP Networking Model
+This output comes from a network analysis tool. It lists a group of lines for each header in a PDU, with the frame (data link) header at the top, then the next header (typically the IP header), and so on. The first line in each section has a gray highlight, with the indented lines below each heading line listing details about the fields inside the respective header. You will need to remember some parts of the various headers, and compare those concepts to this output, to answer this question.
+
+The circled field, part of the Ethernet header, lists a value of hex 0800, which in this case means that an IP header follows next (as shown on the line below the circled field.) What is the name of that circled field?
+
+A Length
+B Type
+C SFD
+D Protocol
+
+Explanation: Answer B is correct.
+
+The Type field defines the type of protocol listed inside the frame. The Length field is used for specifying the length of the data field, and is used in the older specifications for Ethernet. The SFD signifies that the next byte begins the Destination MAC field. Protocol is not a field name in an Ethernet header, but it is a darn good distracter.
+Lesson: Fundamentals of Ethernet LANs
+Objective: Sending Data in Ethernet Networks
+
+From the output of R1, which of the following is accurate?
+
+A R1 has learned about the IP address of 10.0.0.1 less than 1 minute ago.
+B The Hardware Addr field represents a 32-bit Layer 2 address.
+C R1 will use the address of 0019.060c.90c0 as the Layer 3 address to reach 10.0.0.5.
+D The address of 0019.060c.90c0 is designed to be assigned to a single network interface card (NIC) and never duplicated on a different NIC.
+
+Explanation: Answer D is correct.
+
+The IEEE defines the format and assignment of LAN addresses. The IEEE requires globally unique unicast MAC addresses on all LAN interface cards. To ensure a unique MAC address, the Ethernet card manufacturers encode the MAC address onto the card. The first half of the address identifies the manufacturer of the card. Each manufacturer assigns a MAC address with its own OUI as the first half of the address, with the second half of the address being assigned a number that this manufacturer has never used on another card. The timer "(min)" indicates how long ago the MAC address was learned or updated. A timers of "-" means that it wasn't dynamically learned and usually represents the device's own MAC address. A hardware address is 48 bits long, is a Layer 2 address, and is represented in 12 hexadecimal characters (with each representing 4 bits).
+Lesson: Fundamentals of Ethernet LANs
+Objective: Sending Data in Ethernet Networks
+
+Refer to the diagram. What type of physical cable is used for the connection referenced in the diagram?
+A Coaxial cable
+B Telephone cable
+C Fiber-optic cable
+D Triaxial cable
+
+Explanation: Answer A is correct.
+
+Cable Internet that is provided by several Internet service providers utilizes a cable modem and existing coaxial cabling to connect a user to the ISP's network.
+Lesson: Fundamentals of WANs
+Objective: Accessing the Internet
+
+Based on the IP assignments listed in the figure, what would be the network ID?
+A 10.0.0.0
+B 10.20.30.0
+C 10.20.0.0
+D 0.0.0.255
+
+Explanation: Answer A is correct.
+
+A specific network is identified by a specific network ID. In this case, since 10 indicates a Class A network, the network ID would be 10.0.0.0.
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: IPv4 Addressing
+Which of the following are true regarding IPv4 addresses? (Choose two answers.)
+
+A Class B addresses allow for 16,777,214 hosts, per network.
+B Class A addresses include 126.0.0.0 and 128.0.0.0.
+C Class C addresses only allow for 254 hosts on each network.
+D The last Class B network is 191.255.0.0.
+E The last Class C network is 224.255.255.0.
+
+Explanation: Answers C and D are correct.
+
+Class C addresses use the first 3 octets for the network address space, and leave a single octet of 8 bits for the host addresses, which is only enough for 254 valid host addresses. The last Class B network is 191.255.0.0.Class A addresses (not class B) allow for 16,777,214 hosts per network. Class A usable network addresses end at 126.0.0.0, and the last Class C network is 223.255.255.0.
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: IPv4 Addressing
+
+his output comes from a network analysis tool. It lists a group of lines for each header in a PDU, with the frame (data link) header at the top, then the next header (typically the IP header), and so on. The first line in each section has a gray highlight, with the indented lines below each heading line listing details about the fields inside the respective header. You will need to remember some parts of the various headers, and compare those concepts to this output, to answer this question.
+
+Your network has been configured with a dynamic routing protocol. As a result, which information is used, from the graphic shown here, when a router is making a routing decision?
+
+A A
+B B
+C C
+D D
+E E
+F F
+
+Explanation: Answer D is correct.
+
+When making a routing decision, the router looks at the destination IP address of each packet and compares the IP packet's destination IP address to the routing table and finds the route that matches the destination address. This route identifies the outgoing interface of the router, and possibly the next-hop router. Layer 2 addresses are used by Layer 2 switches for forwarding decisions. Source Layer 2 addresses are used by Layer 2 switches to populate the MAC address table and to remember from which ports those MAC addresses were sourced. The source IP address is not used in basic routing decisions. The source or destination TCP port numbers are not used for Layer 3 IP routing.
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: IPv4 Routing
+
+The process of a web server adding a TCP header to the contents of a web page, followed by adding an IP header and then adding a data link header and trailer, is an example of what?
+
+A Data encapsulation
+B Same-layer interaction
+C OSI model
+D All of these answers are correct.
+
+Explanation: Answer A is correct.
+
+Encapsulation is defined as the process of adding a header in front of data supplied by a higher layer (and possibly adding a trailer as well).
+Lesson: Introduction to TCP/IP Networking
+Objective: TCP/IP Networking Model
+
+Which of the following terms is used specifically to identify the entity created when encapsulating data inside data link layer headers and trailers?
+
+A Data
+B Chunk
+C Segment
+D Frame
+E Packet
+
+Explanation: Answer D is correct.
+
+By convention, the term frame refers to the part of a network message that includes the data link header and trailer, with encapsulated data. The term packet omits the data link header and trailer, leaving the network layer header with its encapsulated data. The term segment omits the network layer header, leaving the transport layer header and its encapsulated data.
+Lesson: Introduction to TCP/IP Networking
+Objective: TCP/IP Networking Model
+
+Which of the following protocols are examples of TCP/IP transport layer protocols? (Choose two answers.)
+
+A Ethernet
+B HTTP
+C IP
+D UDP
+E SMTP
+F TCP
+
+Explanation: Answers D and F are correct.
+
+Of the remaining answers, Ethernet defines both physical and data link protocols, PPP is a data link protocol, IP is a network layer protocol, and SMTP and HTTP are application layer protocols.
+Lesson: Introduction to TCP/IP Networking
+Objective: TCP/IP Networking Model
+Which of the following protocols are examples of TCP/IP data link layer protocols? (Choose two answers.)
+
+A Ethernet
+B HTTP
+C IP
+D UDP
+E SMTP
+F TCP
+G PPP
+
+Explanation: Answers A and G are correct.
+
+Of the remaining answers, IP is a network layer protocol, TCP and UDP are transport layer protocols, and SMTP and HTTP are application layer protocols.
+Lesson: Introduction to TCP/IP Networking
+Objective: TCP/IP Networking Model
+
+The process of HTTP asking TCP to send some data and making sure that it is received correctly is an example of what?
+
+A Same-layer interaction
+B Adjacent-layer interaction
+C OSI model
+D All of these answers are correct.
+
+Explanation: Answer B is correct.
+
+Adjacent-layer interaction occurs on one computer, with two adjacent layers in the model. The higher layer requests services from the next lower layer, and the lower layer provides the services to the next higher layer.
+Lesson: Introduction to TCP/IP Networking
+Objective: TCP/IP Networking Model
+
+The process of TCP on one computer marking a TCP segment as segment 1, and the receiving computer then acknowledging the receipt of TCP segment 1 is an example of what?
+
+A Data encapsulation
+B Same-layer interaction
+C Adjacent-layer interaction
+D OSI model
+E All of these answers are correct.
+
+Explanation: Answer B is correct.
+
+Same-layer interaction occurs on multiple computers. The functions defined by that layer typically need to be accomplished by multiple computers - for example, the sender setting a sequence number for a segment, and the receiver acknowledging receipt of that segment. A single layer defines that process, but the implementation of that layer on multiple devices is required to accomplish the function.
+Lesson: Introduction to TCP/IP Networking
+Objective: TCP/IP Networking Model
+
+Which OSI layer defines the functions of logical network-wide addressing and routing?
+
+A Layer 1
+B Layer 2
+C Layer 3
+D Layer 4
+E Layer 5, 6, or 7
+
+Explanation: Answer C is correct.
+
+The network layer concerns itself with delivery of data over the complete end-to-end path. That requires a way to identify each device, using addresses, and the addresses must be logical addresses that are therefore not tied to the physical details of the network.
+Lesson: Introduction to TCP/IP Networking
+Objective: OSI Networking Model
+
+Which OSI layer defines the standards for cabling and connectors?
+
+A Layer 1
+B Layer 2
+C Layer 3
+D Layer 4
+E Layer 5, 6, or 7
+
+Explanation: Answer A is correct.
+
+The OSI physical layer includes all standards that specify the shape of connectors, wiring in cabling, electrical details, and encoding that the electrical signals use to encode bits over a cable.
+Lesson: Introduction to TCP/IP Networking
+Objective: OSI Networking Model
+
+In the LAN for a small office, some user devices connect to the LAN using a cable, while others connect using wireless technology (and no cable). Which of the following is true regarding the use of Ethernet in this LAN?
+
+A Only the devices that use cables are using Ethernet.
+B Only the devices that use wireless are using Ethernet.
+C Both the devices using cables and those using wireless are using Ethernet.
+D None of the devices are using Ethernet.
+
+Explanation: Answer A is correct.
+
+The IEEE defines Ethernet LAN standards, with standard names that begin with 802.3, all of which happen to use cabling. The IEEE also defines wireless LAN standards, with standard names that begin with 802.11, which are separate standards from Ethernet.
+Lesson: Fundamentals of Ethernet LANs
+Objective: An Overview of LANs
+
+Each answer lists two types of devices used in a 100BASE-T network. If these devices were connected with UTP Ethernet cables, which pairs of devices would require a straight-through cable? (Choose three answers.)
+
+A PC and router
+B PC and switch
+C Hub and switch
+D Router and hub
+E Wireless access point (Ethernet port) and switch
+
+Explanation: Answers B, D, and E are correct.
+
+Routers, wireless access point Ethernet ports, and PC NICs all send using pins 1 and 2, whereas hubs and LAN switches transmit on pins 3 and 6. Straight-through cables connect devices that use opposite pin pairs for sending, because the cable does not need to cross the pairs.
+Lesson: Fundamentals of Ethernet LANs
+Objective: Building Physical Ethernet Networks with UTP
+
+Which of the following is true about Ethernet crossover cables for Fast Ethernet?
+
+A Pins 1 and 2 are reversed on the other end of the cable.
+B Pins 1 and 2 on one end of the cable connect to pins 3 and 6 on the other end of the cable.
+C Pins 1 and 2 on one end of the cable connect to pins 3 and 4 on the other end of the cable.
+D The cable can be up to 1000 meters long to cross over between buildings.
+E None of the other answers is correct.
+
+Explanation: Answer B is correct.
+
+Crossover cables cross the wire at one node's transmit pin pair to the different pins used as the receive pins on the other device. For 10- and 100-Mbps Ethernet, the specific crossover cable wiring connects the pair at pins 1 and 2 on each end of the cable to pins 3 and 6 on the other end of the cable, respectively.
+Lesson: Fundamentals of Ethernet LANs
+Objective: Building Physical Ethernet Networks with UTP
+
+Which of the following Ethernet standards defines Gigabit Ethernet over UTP cabling? 
+A 10GBASE-T
+B 100BASE-T
+C 1000BASE-T
+D None of the other answers is correct.
+
+Explanation: Answer C is correct.
+
+The number before the word BASE defines the speed, in megabits per second (Mbps). 1000 Mbps equals 1 gigabit per second (1 Gbps). The T in the suffix implies twisted-pair or UTP cabling, so 1000BASE-T is the UTP-based Gigabit Ethernet standard name.
+Lesson: Fundamentals of Ethernet LANs
+Objective: Building Physical Ethernet Networks with UTP
+
+Which of the following is true about the Ethernet FCS field?
+
+A Ethernet uses FCS for error recovery.
+B It is 2 bytes long.
+C It resides in the Ethernet trailer, not the Ethernet header.
+D It is used for encryption.
+
+Explanation: Answer C is correct.
+
+The 4-byte Ethernet FCS field, found in the Ethernet trailer, allows the receiving node to see what the sending node computed with a math formula that is a key part of the error-detection process. Note that Ethernet defines the process of detecting errors (error detection), but not error recovery.
+Lesson: Fundamentals of Ethernet LANs
+Objective: Sending Data in Ethernet Networks
+
+Which of the following is true about the CSMA/CD algorithm? 
+A The algorithm never allows collisions to occur.
+B Collisions can happen, but the algorithm defines how the computers should notice a collision and how to recover.
+C The algorithm works with only two devices on the same Ethernet.
+D None of the other answers is correct.
+
+Explanation: Answer B is correct.
+
+NICs (and switch ports) use the carrier sense multiple access with collision detection (CSMA/CD) algorithm to implement half-duplex logic. CSMA/CD attempts to avoid collisions, but it also notices when collisions do occur, with rules about how the Ethernet nodes should stop sending, wait, and try again later.
+Lesson: Fundamentals of Ethernet LANs
+Objective: Sending Data in Ethernet Networks
+
+Which of the following are true about the format of Ethernet addresses? (Choose three answers.)
+
+A Each manufacturer puts a unique OUI code into the first 2 bytes of the address.
+B Each manufacturer puts a unique OUI code into the first 3 bytes of the address.
+C Each manufacturer puts a unique OUI code into the first half of the address.
+D The part of the address that holds this manufacturer's code is called the MAC.
+E The part of the address that holds this manufacturer's code is called the OUI.
+F The part of the address that holds this manufacturer's code has no specific name.
+
+Explanation: Answers B, C, and E are correct.
+
+The pre-assigned universal MAC address, given to each Ethernet port when manufactured, breaks the address into two 3-byte halves. The first half is called the organizationally unique identifier (OUI), which the IEEE assigns to the company that builds the product as a unique hex number to be used only by that company.
+Lesson: Fundamentals of Ethernet LANs
+Objective: Sending Data in Ethernet Networks
+
+Which of the following terms describe Ethernet addresses that can be used to send one frame that is delivered to multiple devices on the LAN? (Choose two answers.)
+A Burned-in address
+B Unicast address
+C Broadcast address
+D Multicast address
+
+Explanation: Answers C and D are correct.
+
+Ethernet supports unicast addresses, which identify a single Ethernet node, and group addresses, which can be used to send one frame to multiple Ethernet nodes. The two types of group addresses are the broadcast address and multicast addresses.
+Lesson: Fundamentals of Ethernet LANs
+Objective: Sending Data in Ethernet Networks
+
+A Logical addressing
+B Physical addressing
+C Path selection
+D Arbitration
+E Error recovery
+
+Explanation: Answers A and C are correct.
+
+The network layer defines logical addressing, in contrast to physical addressing. The logical address structure allows easy grouping of addresses, which makes routing more efficient. Path selection refers to the process of choosing the best routes to use in the network. Physical addressing and arbitration typically are data link layer functions, and error recovery typically is a transport layer function.
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: Overview of Network Layer Functions
+
+Which of the following is a valid Class C IP address that can be assigned to a host?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A 1.1.1.1
+B 200.1.1.1
+C 128.128.128.128
+D 224.1.1.1
+Explanation: Answer B is correct.
+
+224.1.1.1 is a Class D address.
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: IPv4 Addressing
+
+What is the assignable range of values for the first octet for Class A IP networks?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A 0 to 127
+B 0 to 126
+C 1 to 127
+D 1 to 126
+E 128 to 191
+F 128 to 192
+Explanation: Answer D is correct.
+
+The first octet of Class A addresses ranges from 1 to 126, inclusive; Class B, 128 to 191, inclusive; and Class C, 192 to 223 inclusive. 127 is technically in the Class A range, but it is a reserved address used as a loopback.
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: IPv4 Addressing
+
+PC1 and PC2 are on two different Ethernet LANs that are separated by an IP router. PC1's IP address is 10.1.1.1, and no subnetting is used. Which of the following addresses could be used for PC2? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A 10.1.1.2
+B 10.2.2.2
+C 10.200.200.1
+D 9.1.1.1
+E 225.1.1.1
+F 1.1.1.1
+Explanation: Answers D and F are correct.
+
+Without any subnetting in use, all addresses in the same network as 10.1.1.1 - all addresses in Class A network 10.0.0.0 - must be on the same LAN. Addresses separated from that network by some router cannot be in network 10.0.0.0. So, the two correct answers are the only two answers that list a valid unicast IP address that is not in network 10.0.0.0.
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: IPv4 Addressing
+Familiarize yourself with the navigation bar. Use this bar to access all important functions.
+
+Which of the following does a router normally use when making a decision about routing TCP/IP packets?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A Destination MAC address
+B Source MAC address
+C Destination IP address
+D Source IP address
+E Destination MAC and IP addresses
+Explanation: Answer C is correct.
+
+Routers compare the packet's destination IP address to the router's IP routing table, making a match and using the forwarding instructions in the matched route to forward the IP packet.
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: IPv4 Routing
+
+Imagine a network with two routers that are connected with a point-to-point HDLC serial link. Each router has an Ethernet, with PC1 sharing the Ethernet with Router1 and PC2 sharing the Ethernet with Router2. When PC1 sends data to PC2, which of the following is true?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A Router1 strips the Ethernet header and trailer off the frame received from PC1, never to be used again.
+B Router1 encapsulates the Ethernet frame inside an HDLC header and sends the frame to Router2, which extracts the Ethernet frame for forwarding to PC2.
+C Router1 strips the Ethernet header and trailer off the frame received from PC1, which is exactly re-created by Router2 before forwarding data to PC2.
+D Router1 removes the Ethernet, IP, and TCP headers and rebuilds the appropriate headers before forwarding the packet to Router2.
+Explanation: Answer A is correct.
+
+PC1 will send an Ethernet frame to Router1, with PC1's MAC address as the source address and Router1's MAC address as the destination address. Router1 will remove the encapsulated IP packet from that Ethernet frame, discarding the frame header and trailer. Router1 will forward the IP packet by first encapsulating it inside an HDLC frame, but Router1 will not encapsulate the Ethernet frame in the HDLC frame, but rather the IP packet. Router2 will deencapsulate the IP packet from the HDLC frame and forward it onto the Ethernet LAN, adding a new Ethernet header and trailer, but this header will differ. It will list Router2's MAC address as the source address and PC2's MAC address as the destination address.
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: IPv4 Routing
+
+Which of the following are true about a LAN-connected TCP/IP host and its IP routing (forwarding) choices? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A The host always sends packets to its default gateway.
+B The host sends packets to its default gateway if the destination IP address is in a different class of IP network than the host.
+C The host sends packets to its default gateway if the destination IP address is in a different subnet than the host.
+D The host sends packets to its default gateway if the destination IP address is in the same subnet as the host.
+Explanation: Answers B and C are correct.
+
+IPv4 hosts generally use basic two-branch logic. To send an IP packet to another host on the same IP network or subnet that is on the same LAN, the sender sends the IP packet directly to that host. Otherwise, the sender sends the packet to its default router (also called the default gateway).
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: IPv4 Routing
+
+Which of the following are functions of a routing protocol? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A Advertising known routes to neighboring routers
+B Learning routes for subnets directly connected to the router
+C Learning routes, and putting those routes into the routing table, for routes advertised to the router by its neighboring routers
+D Forwarding IP packets based on a packet's destination IP address
+Explanation: Answers A and C are correct.
+
+Routers do all the actions listed in all four answers. However, the routing protocol does the functions in the two listed answers. Independent of the routing protocol, a router learns routes for IP subnets and IP networks directly connected to its interfaces. Routers also forward (route) IP packets, but that process is called IP routing, or IP forwarding, and is an independent process compared to the work of a routing protocol.
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: IPv4 Routing Protocols
+
+A company implements a TCP/IP network, with PC1 sitting on an Ethernet LAN. Which of the following protocols and features requires PC1 to learn information from some other server device?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A ARP
+B ping
+C DNS
+D None of these answers is correct.
+Explanation: Answer C is correct.
+
+Address Resolution Protocol (ARP) does allow PC1 to learn information, but the information is not stored on a server. The ping command does let the user at PC1 learn whether packets can flow in the network, but it again does not use a server. With the Domain Name System (DNS), PC1 acts as a DNS client, relying on a DNS server to respond with information about the IP addresses that match a given hostname.
+Lesson: Fundamentals of IPv4 Addressing and Routing
+Objective: Other Network Layer Features
+
+What do you call data that includes the Layer 4 protocol header, and data given to Layer 4 by the upper layers, not including any headers and trailers from Layers 1 to 3? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A L3PDU
+B Chunk
+C Segment
+D Packet
+E Frame
+F L4PDU
+Explanation: Answers C and F are correct.
+
+The terms packet and L3PDU refer to the header plus data encapsulated by Layer 3. Frame and L2PDU refer to the header (and trailer), plus the data encapsulated by Layer 2. Segment and L4PDU refer to header and data encapsulated by the transport layer protocol.
+Lesson: Fundamentals of TCP/IP Transport and Applications
+Objective: TCP/IP Layer 4 Protocols: TCP and UDP
+
+
+Which of the following functions is performed by both TCP and UDP?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A Windowing
+B Error recovery
+C Multiplexing using port numbers
+D Routing
+E Encryption
+F Ordered data transfer
+Explanation: Answer C is correct.
+
+TCP, not UDP, performs windowing, error recovery, and ordered data transfer. Neither performs routing or encryption.
+Lesson: Fundamentals of TCP/IP Transport and Applications
+Objective: TCP/IP Layer 4 Protocols: TCP and UDP
+
+Which of the following header fields identify which TCP/IP application gets data received by the computer? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A Ethernet Type
+B SNAP Protocol Type
+C IP Protocol
+D TCP Port Number
+E UDP Port Number
+Explanation: Answers D and E are correct.
+
+Many headers include a field that identifies the next header that follows inside a message. Ethernet uses the Ethernet Type field, and the IP header uses the Protocol field. The TCP and UDP headers identify the application that should receive the data that follows the TCP or UDP header by using the port number field in the TCP and UDP headers, respectively.
+Lesson: Fundamentals of TCP/IP Transport and Applications
+Objective: TCP/IP Layer 4 Protocols: TCP and UDP
+
+Which of the following are typical functions of TCP? (Choose four answers.)
+A Flow control (windowing)
+B Error recovery
+C Multiplexing using port numbers
+D Routing
+E Encryption
+F Ordered data transfer
+Explanation: Answers A, B, C, and F are correct.
+
+IP, not TCP, defines routing. Many other protocols define encryption, but TCP does not. The correct answers simply list various TCP features.
+Lesson: Fundamentals of TCP/IP Transport and Applications
+Objective: TCP/IP Layer 4 Protocols: TCP and UDP
+
+Fred opens a web browser and connects to the www.certskills.com website. Which of the following are typically true about what happens between Fred's web browser and the web server? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A Messages flowing toward the server use UDP destination port 80.
+B Messages flowing from the server typically use RTP.
+C Messages flowing to the client typically use a source TCP port number of 80.
+D Messages flowing to the server typically use TCP.
+Explanation: Answers C and D are correct.
+
+Web traffic uses TCP as the transport protocol, with HTTP as the application protocol. As a result, the web server typically uses well-known TCP port 80, which is the well-known port for HTTP traffic. Messages flowing to the web server would have a destination TCP port of 80, and messages flowing from the server would have a source TCP port of 80.
+Lesson: Fundamentals of TCP/IP Transport and Applications
+Objective: TCP/IP Applications
+
+In the URI http://www.certskills.com/ICND1, which part identifies the web server?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A http
+B www.certskills.com
+C certskills.com
+D http://www.certskills.com
+E The file name.html includes the hostname.
+Explanation: Answer B is correct.
+
+Note that the hostname is all the text between the // and the /. The text before the // identifies the application layer protocol, and the text after the / represents the name of the web page.
+Lesson: Fundamentals of TCP/IP Transport and Applications
+Objective: TCP/IP Applications
+
+Which of the following was a short-term solution to the IPv4 address exhaustion problem?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A IP version 6
+B IP version 5
+C NAT/PAT
+D ARP
+Explanation: Answer C is correct.
+
+NAT, specifically the PAT feature that allows many hosts to use private IPv4 addresses while being supported by a single public IPv4 address, was one short-term solution to the IPv4 address exhaustion problem. IP version 5 existed briefly as an experimental protocol and had nothing to do with IPv4 address exhaustion. IPv6 directly addresses the IPv4 address exhaustion problem, but it is a long-term solution. ARP has no impact on the number of IPv4 addresses used.
+Lesson: Fundamentals of IP Version 6
+Objective: Introduction to IPv6
+
+A router receives an Ethernet frame that holds an IPv6 packet. The router then makes a decision to route the packet out a serial link. Which of the following statements is true about how a router forwards an IPv6 packet?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A The router discards the Ethernet data-link header and trailer of the received frame.
+B The router makes the forwarding decision based on the packet's source IPv6 address.
+C The router keeps the Ethernet header, encapsulating the entire frame inside a new IPv6 packet before sending it over the serial link.
+D The router uses the IPv4 routing table when choosing where to forward the packet.
+Explanation: Answer A is correct.
+
+Routers use the same process steps when routing IPv6 packets as they do when routing IPv4 packets. Routers route IPv6 packets based on the IPv6 addresses, listed inside the IPv6 header in the IPv6 packets, by comparing the destination IPv6 address to the router's IPv6 routing table. As a result, the router discards the incoming frame's data-link header and trailer, leaving an IPv6 packet. The router compares the destination (not source) IPv6 address in the header to the router's IPv6 (not IPv4) routing table and then forwards the packet based on the matched route.
+Lesson: Fundamentals of IP Version 6
+Objective: Introduction to IPv6
+Which of the following is the prefix for address 2000:0000:0000:0005:6000:0700:0080:0009, assuming a mask of /64?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A 2000::5::/64
+B 2000::5:0:0:0:0/64
+C 2000:0:0:5::/64
+D 2000:0:0:5:0:0:0:0/64
+Explanation: Answer C is correct.
+
+The /64 prefix length means that the last 64 bits, or last 16 digits, of the address should be changed to all 0s. That process leaves the unabbreviated prefix as 2000:0000:0000:0005:0000:0000:0000:0000. The last four quartets are all 0s, making that string of all 0s be the longest and best string of 0s to replace with ::. After removing the leading 0s in other quartets, the answer is 2000:0:0:5::/64.
+Lesson: Fundamentals of IP Version 6
+Objective: IPv6 Addressing Formats and Conventions
+
+Which of the following is the shortest valid abbreviation for FE80:0000:0000:0100:0000:0000:0000:0123?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A FE80::100::123
+B FE8::1::123
+C FE80::100:0:0:0:123:4567
+D FE80:0:0:100::123
+Explanation: Answer D is correct.
+
+If following the steps in the book, the first step removes up to three leading 0s in each quartet, leaving FE80:0:0:100:0:0:0:123. This leaves two strings of consecutive all-0 quartets; by changing the longest string of all 0s to ::, the address is FE80:0:0:100::123.
+Lesson: Fundamentals of IP Version 6
+Objective: IPv6 Addressing Formats and Conventions
+
+Which of the following is the shortest valid abbreviation for 2000:0300:0040:0005:6000:0700:0080:0009?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A 2:3:4:5:6:7:8:9
+B 2000:300:40:5:6000:700:80:9
+C 2000:300:4:5:6000:700:8:9
+D 2000:3:4:5:6:7:8:9
+Explanation: Answer B is correct.
+
+This question has many quartets that make it easy to make a common mistake: removing trailing 0s in a quartet of hex digits. To abbreviate IPv6 addresses, only leading 0s in a quartet should be removed. Many of the quartets have trailing 0s (0s on the right side of the quartet), so make sure to not remove those 0s.
+Lesson: Fundamentals of IP Version 6
+Objective: IPv6 Addressing Formats and Conventions
+
+Which of the following is the unabbreviated version of IPv6 address 2001:DB8::200:28?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A 2001:0DB8:0000:0000:0000:0000:0200:0028
+B 2001:0DB8::0200:0028
+C 2001:0DB8:0:0:0:0:0200:0028
+D 2001:0DB8:0000:0000:0000:0000:200:0028
+Explanation: Answer A is correct.
+
+The unabbreviated version of an IPv6 address must have 32 digits, and only one answer has 32 hex digits. In this case, the original number shows four quartets and a ::. So, the :: was replaced with four quartets of 0000, making the number have eight quartets. Then, for each quartet with fewer than four digits, leading 0s were added so that each quartet has four hex digits.
+Lesson: Fundamentals of IP Version 6
+Objective: IPv6 Addressing Formats and Conventions
+
+Which of the following fields in the HDLC header used by Cisco routers does Cisco add, beyond the ISO standard HDLC?
+A Flag
+B Type
+C Address
+D FCS
+Explanation: Answer B is correct.
+
+The standard HDLC header does not include a Type field, which identifies the type of packet encapsulated inside the HDLC frame.
+Lesson: Fundamentals of WANs
+Objective: Leased-Line WANs
+
+In the cabling for a leased line, which of the following typically connects to a four-wire line provided by a telco?
+A Router serial interface without internal CSU/DSU
+B CSU/DSU
+C Router serial interface with internal transceiver
+D Switch serial interface
+Explanation: Answer B is correct.
+
+The four-wire circuit cable supplied by the telco connects to the device acting as the CSU/DSU. That can be an external CSU/DSU or a CSU/DSU integrated into a router serial interface card. LAN switches do not have serial interfaces, and router serial interfaces do not have transceivers.
+Lesson: Fundamentals of WANs
+Objective: Leased-Line WANs
+
+Which of the following is an accurate speed at which a leased line can operate in the United States?
+A 100 Mbps
+B 100 Kbps
+C 256 Kbps
+D 6.4 Mbps
+Explanation: Answer C is correct.
+
+Leased lines can run at various preset speeds. These include multiples of 64 kbps, up through 24 times 64 kbps. The speeds can also be multiples of T1 speed (1.544 Mbps), up to 28 times that speed.
+Lesson: Fundamentals of WANs
+Objective: Leased-Line WANs
+
+Two routers, R1 and R2, connect using an Ethernet over MPLS service. The service provides point-to-point service between these two routers only, as a Layer 2 Ethernet service. Which of the following are the most likely to be true about this WAN? (Choose two answers.)
+A R1 will connect to a physical Ethernet link, with the other end of the cable connected to R2
+B R1 will connect to a physical Ethernet link, with the other end of the cable connected to a device at the WAN service provider point of presence.
+C R1 will forward data-link frames to R2 using an HDLC header/trailer.
+D R1 will forward data-link frames to R2 using an Ethernet header/trailer.
+Explanation: Answers B and D are correct.
+
+The physical installation uses a model in which each router uses a physical Ethernet link to connect to some SP device in an SP facility called a point of presence (PoP). The Ethernet link does not span from each customer device to the other. From a data-link perspective, both routers use the same Ethernet standard header and trailer used on LANs; HDLC does not matter on these Ethernet WAN links.
+Lesson: Fundamentals of WANs
+Objective: Ethernet as a WAN Technology
+
+Which of the following statements describes part of the process of how a switch decides to forward a frame destined for a known unicast MAC address?
+A It compares the unicast destination address to the bridging, or MAC address, table.
+B It compares the unicast source address to the bridging, or MAC address, table.
+C It forwards the frame out all interfaces in the same VLAN except for the incoming interface.
+D It compares the destination IP address to the destination MAC address.
+E It compares the frame's incoming interface to the source MAC entry in the MAC address table.
+Explanation: Answer A is correct.
+
+A switch compares the destination MAC address to the MAC address table. If a matching entry is found, the switch forwards the frame out the appropriate interface. If no matching entry is found, the switch floods the frame.
+Lesson: Analyzing Ethernet LAN Switching
+Objective: LAN Switching Concepts
+
+Which of the following comparisons does a switch make when deciding whether a new MAC address should be added to its MAC address table?
+A It compares the unicast destination address to the bridging, or MAC address, table.
+B It compares the unicast source address to the bridging, or MAC address, table.
+C It compares the VLAN ID to the bridging, or MAC address, table.
+D. It compares the destination IP address's ARP cache entry to the bridging, or MAC address, table.
+Explanation: Answer B is correct.
+
+Switches need to learn the location of each MAC address used in the LAN relative to that local switch. When a switch receives a frame, the source MAC identifies the sender. The interface in which the frame arrives identifies the local switch interface closest to that node in the LAN topology.
+Lesson: Analyzing Ethernet LAN Switching
+Objective: LAN Switching Concepts
+Fred has just added DSL service at his home, with a separate DSL modem and consumer-grade router with four Ethernet ports. Fred wants to use the same old phone he was using before the installation of DSL. Which is most likely true about the phone cabling and phone used with his new DSL installation?
+A He uses the old phone, cabled to one of the router/switch device's Ethernet ports.
+B He uses the old phone, cabled to the DSL modem's ports.
+C He uses the old phone, cabled to an existing telephone port, and not to any new device.
+D The old phone must be replaced with a digital phone.
+Explanation: Answer C is correct.
+
+With DSL, the requirements on the phone's wiring are unchanged. The phone can connect to any working telephone jack, as if the DSL modem and router did not exist.
+Lesson: Fundamentals of WANs
+Objective: Accessing the Internet
+
+Which of the following devices would be in the same collision domain as PC1?
+A PC2, which is separated from PC1 by an Ethernet hub
+B PC3, which is separated from PC1 by a transparent bridge
+C PC4, which is separated from PC1 by an Ethernet switch
+D PC5, which is separated from PC1 by a router
+Explanation: Answer A is correct.
+
+A collision domain contains all devices whose frames could collide with frames sent by all the other devices in the domain. Bridges, switches, and routers separate or segment a LAN into multiple collision domains, whereas hubs and repeaters do not.
+Lesson: Analyzing Ethernet LAN Designs
+Objective: Analyzing Collision Domains and Broadcast Domains
+
+In a three-tier campus LAN design, which of the following are typically true of the topology design? (Choose two answers.)
+A The design uses a partial mesh of links between access and distribution switches
+B The design uses a full mesh of links between access and distribution switches
+C The design uses a partial mesh of links between the distribution and core switches
+D The end user and server devices connect directly to distribution layer switches
+Explanation: Answers A and C are correct.
+
+The access layer switches, not the distribution layer switches, play the role of connecting to the endpoint devices, whether they are end-user devices or servers. Then, from the access to the distribution layer, each access layer connects to two distribution switches typically, but with no direct connections between access layer switches, creating a mesh, but a partial mesh. A three-tier design, also called a core design, does use core switches, with a partial mesh of links between the distribution and core switches. Basically, each distribution switch connects to multiple core switches, but often does not connect directly to other distribution switches.
+Lesson: Analyzing Ethernet LAN Designs
+Objective: Analyzing Campus LAN Topologies
+
+Which of the following Ethernet standards support a maximum cable length of longer than 100 meters? (Choose two answers.)
+A 100BASE-T
+B 1000BASE-SX
+C 1000BASE-T
+D 1000BASE-LX
+Explanation: Answers B and D are correct.
+
+The IEEE Ethernet standards support 100-meter links when using UTP cabling. Most standards that use fiber-optic cabling, like the standards in the two correct answers, use lengths longer than 100 meters.
+Lesson: Analyzing Ethernet LAN Designs
+Objective: Analyzing LAN Physical Standard Choices
+
+Imagine a switch with three configured VLANs. How many IP subnets are required, assuming that all hosts in all VLANs want to use TCP/IP?
+A 0
+B 1
+C 2
+D 3
+E You cannot tell from the information provided.
+Explanation: Answer D is correct.
+
+Although a subnet and a VLAN are not equivalent concepts, the devices in one VLAN are typically in the same IP subnet and vice versa.
+Lesson: Implementing Ethernet Virtual LANs
+Objective: Virtual LAN Concepts
+
+In a LAN, which of the following terms best equates to the term VLAN?
+A Collision domain
+B Broadcast domain
+C Subnet
+D Single switch
+E Trunk
+Explanation: Answer B is correct.
+
+A VLAN is a set of devices in the same Layer 2 broadcast domain. A subnet often includes the exact same set of devices, but it is a Layer 3 concept. A collision domain refers to a set of Ethernet devices, but with different rules than VLAN rules for determining which devices are in the same collision domain.
+Lesson: Implementing Ethernet Virtual LANs
+Objective: Virtual LAN Concepts
+
+A switch has just arrived from Cisco. The switch has never been configured with any VLANs, but VTP has been disabled. An engineer gets into configuration mode and issues the vlan 22 command, followed by the name Hannahs-VLAN command. Which of the following are true? (Choose two answers.)
+A VLAN 22 is listed in the output of the show vlan brief command.
+B VLAN 22 is listed in the output of the show running-config command.
+C VLAN 22 is not created by this process.
+D VLAN 22 does not exist in that switch until at least one interface is assigned to that VLAN.
+Explanation: Answers A and B are correct.
+
+The configured VTP setting of VTP transparent mode means that the switch can configure VLANs, so the VLAN is configured. In addition, the VLAN configuration details, including the VLAN name, show up as part of the running-config file.
+Lesson: Implementing Ethernet Virtual LANs
+Objective: VLAN and VLAN Trunking Configuration and Verification
+
+Imagine that you are told that switch 1 is configured with the dynamic auto parameter for trunking on its Fa0/5 interface, which is connected to switch 2. You have to configure switch 2. Which of the following settings for trunking could allow trunking to work? (Choose two answers.)
+A Trunking turned trunk
+B dynamic auto
+C dynamic desirable
+D access
+E None of the other answers are correct.
+Explanation: Answers A and C are correct.
+
+The dynamic auto setting means that the switch can negotiate trunking, but it can only respond to negotiation messages, and it cannot initiate the negotiation process. So, the other switch must be configured to trunk or to initiate the negotiation process (based on being configured with the dynamic desirable option).
+Lesson: Implementing Ethernet Virtual LANs
+Objective: VLAN and VLAN Trunking Configuration and Verification
+
+Which answers describe a good practice in applying good troubleshooting methodologies? (Choose two answers.)
+
+A Perform problem isolation as fast as possible, including not slowing down to document your findings.
+B The last step in a good troubleshooting process should be to take action to resolve the root cause of the problem.
+C The last step in a good troubleshooting process should include monitoring the status to ensure that the problem is indeed solved and does not recur.
+D Each worker should know and use the escalation process when they cannot resolve a particular problem.
+
+Explanation: Answers C and D are correct.
+
+This question asks about a topic that, by nature, is subjective. Cisco does not dictate a particular pre-defined troubleshooting methodology. However, many good practices make good common sense and work in real networks. The incorrect answers to this question were chosen to be a bit obvious just to make the point about what Cisco does mention about troubleshooting methods in the exam topics, because this question takes those exam topics and builds in some common sense as applied to the exam topics.
+
+One incorrect answer says to now slow down to document problems is contrary to one of the exam topics, and is certainly against good troubleshooting practices. Do problem isolation, and record your findings.
+
+Two answers state what the last step in the troubleshooting process should be, so one must be incorrect, possibly both (that is, only one step could be the last step). Resolving the problem is not the last step. After resolving the problem, the person working the problem should verify that the problem is indeed solved, and possibly monitor the status for a period of time before considering the problem resolved.
+
+The answer that mentions the escalation process basically defines a good process: if the engineer cannot resolve the problem, they should know how to escalate the problem to another engineer or manager, and they should indeed follow that process.
+Lesson: Troubleshooting Ethernet LANs
+Objective: Perspectives on Applying Troubleshooting Methodologies
+
+
+The output of the show interfaces status command on a 2960 switch shows interface Fa0/1 in a "disabled" state. Which of the following is true about interface Fa0/1? (Choose three answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+
+A The interface is configured with the shutdown command.
+B The show interfaces fa0/1 command will list the interface with two status codes of administratively down and line protocol down.
+C The show interfaces fa0/1 command will list the interface with two status codes of up and down.
+D The interface cannot currently be used to forward frames.
+E The interface can currently be used to forward frames.
+
+Explanation: Answers A, B, and D are correct.
+
+The disabled state in the show interfaces status command is the same as an "administratively down and down" state shown in the show interfaces command. The interface must be in a connected state (per the show interfaces status command) before the switch can send frames out the interface.
+Lesson: Troubleshooting Ethernet LANs
+Objective: Analyzing Switch Interface Status and Statistics
+
+
+A
+The link works at 1000 Mbps (1 Gbps).
+B
+SW1 attempts to run at 10 Mbps because SW2 has effectively disabled IEEE standard autonegotiation.
+C
+The link runs at 1 Gbps, but SW1 uses half-duplex and SW2 uses full duplex.
+D
+Both switches use full duplex.
+
+Explanation: Answers A and D are correct.
+
+SW2 has effectively disabled IEEE standard autonegotiation by configuring both speed and duplex. However, Cisco switches can detect the speed used by the other device, even with autonegotiation turned off. Also, at 1 Gbps, the IEEE autonegotiation standard says to use full duplex. If the duplex setting cannot be negotiated, so both ends use 1 Gbps, full duplex.
+Lesson: Troubleshooting Ethernet LANs
+Objective: Analyzing Switch Interface Status and Statistics
+
+
+In the following line taken from a show interfaces fa0/1 command, which of the following are true about the interface? (Choose two answers.)
+
+Full-duplex, 100Mbps, media type is 10/100BaseTX
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+The speed was definitely configured with the speed 100 interface subcommand.
+B
+The speed might have been configured with the speed 100 interface subcommand.
+C
+The duplex was definitely configured with the duplex full interface subcommand.
+D
+The duplex might have been configured with the duplex full interface subcommand.
+Explanation: Answers B and D are correct.
+
+The show interfaces command lists the actual speed and duplex setting, but it does not imply anything about how the settings were configured or negotiated. The show interfaces status command lists a prefix of a- in front of the speed and duplex setting to imply that the setting was autonegotiated, leaving off this prefix if the setting was configured.
+Lesson: Troubleshooting Ethernet LANs
+Objective: Analyzing Switch Interface Status and Statistics
+
+On a Cisco Catalyst switch, you issue a show mac address-table command. Which of the following answers list information you would likely see in most lines of output? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+A MAC address
+B
+An IP address
+C
+A VLAN ID
+D
+Type (broadcast, multicast, or unicast)
+
+Explanation: Answers A and C are correct.
+
+The show mac address-table command lists all entries in the switch's MAC address table, including dynamically learned and statically defined addresses. From left to right, the output lists the VLAN ID, the MAC address, the type (static or dynamic), and the associated ports (out which frames sent to the listed address will be forwarded by this switch).
+Lesson: Troubleshooting Ethernet LANs
+Objective: Predicting Where Switches Will Forward Frames
+
+Which of the following commands list the MAC address table entries for MAC addresses configured by port security? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+show mac address-table dynamic
+B
+show mac address-table
+C
+show mac address-table static
+D
+show mac address-table port-security
+
+Explanation: Answers B and C are correct.
+
+IOS adds MAC addresses configured by the port security feature as static MAC addresses, so they do not show up in the output of the show mac address-table dynamic command. show mac address-table port-security is not a valid command.
+Lesson: Troubleshooting Ethernet LANs
+Objective: Analyzing Port Security Operations on an Interface
+
+
+The show port-security interface f0/1 command lists a port status of secure-shutdown. Which of the following answer must be true about this interface at this time?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+The show interface status command lists the interface status as connected.
+B
+The show interface status command lists the interface status as err-disabled.
+C
+The show port-security interface command could list a mode of shutdown or restrict, but not protect.
+D
+The show port-security interface command could list a violation counter value of 10.
+
+Explanation: Answer B is correct.
+
+The question states that the port security status is secure-shutdown. This state is only used by the shutdown port security mode, and when used, it means that the interface has been placed into an err-disabled state. Those facts give the facts as to why the correct answer is correct, and why two of the incorrect answers are incorrect.
+
+The incorrect answer that mentions the violation counter is incorrect because in shutdown mode, the counter no longer increments once the interface is placed into secure-shutdown mode, and resets to 0 once the interface is reset with the shutdown and then no shutdown commands.
+Lesson: Troubleshooting Ethernet LANs
+Objective: Analyzing Port Security Operations on an Interface
+
+
+The show interfaces g0/1 switchport command on SW1 shows the trunking status on a link connected to switch SW2. Based on the output, which of the following must be true on SW2's port connected to this link?
+
+SW1# show interfaces gigabit0/1 switchport
+
+Name: Gi0/1
+
+Switchport: Enabled
+
+Administrative Mode: trunk
+
+Operational Mode: trunk
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+The operational state per show interfaces switchport must be "trunk."
+B
+The administrative state per show interfaces switchport must be "trunk."
+C
+SW2 must use the switchport mode trunk configuration command on G0/2, or the link will not use trunking.
+D
+SW2 can use the switchport mode dynamic auto configuration command as one option to make the link use trunking.
+
+Explanation: Answer D is correct.
+
+The show interface switchport command lists a switch's configured value of the switchport mode command as the administrative mode, telling us that SW1 uses the switchport mode trunk configuration command. The operation state shows the current working state (trunk). Of the four answers, one incorrect answer claims that SW2's operational state must also be "trunk"; however, one switch can use trunking, while the other does not. Another answer claims that the administrative mode must be "trunk," which basically means that the command switchport mode trunk must be used. However, SW2 has a few other configuration options that would work, like the switchport mode dynamic desirable and switchport mode dynamic auto commands, with the correct answer referring to one of those commands (the switchport mode dynamic auto command).
+Lesson: Troubleshooting Ethernet LANs
+Objective: Analyzing VLANs and VLAN Trunks
+
+
+A Class B network needs to be subnetted such that it supports 100 subnets and 100 hosts/subnet. Which of the following answers list a workable combination for the number of network, subnet, and host bits? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+Network = 16, subnet = 7, host = 7
+B
+Network = 16, subnet = 8, host = 8
+C
+Network = 16, subnet = 9, host = 7
+D
+Network = 8, subnet = 7, host = 17
+
+Explanation: Answers B and C are correct.
+
+At least 7 subnet bits are needed, because 26 = 64, so 6 subnet bits could not number 100 different subnets. Seven subnet bits could, because 27 = 128 => 100. Similarly, 6 host bits is not enough, because 26 − 2 = 62, but 7 host bits is enough, because 27 − 2 = 126 => 100.
+
+The number of network, subnet, and host bits must total 32 bits, making one of the answers incorrect. The answer with 8 network bits cannot be correct because the question states that a Class B network is used, so the number of network bits must always be 16. The two correct answers have 16 network bits (required because the question states the use of a Class B network), and at least 7 subnet and host bits each.
+Lesson: Perspectives on IPv4 Subnetting
+Objective: Analyze Subnetting and Addressing Needs
+
+
+Why does the formula for the number of hosts per subnet (2H - 2) require the subtraction of two hosts?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+To reserve two addresses for redundant default gateways (routers)
+B
+To reserve the two addresses required for DHCP operation
+C
+To reserve addresses for the subnet ID and default gateway (router)
+D
+To reserve addresses for the subnet broadcast address and subnet ID
+
+Explanation: Answer D is correct.
+
+By definition, two address values in every IPv4 subnet cannot be used as host IPv4 addresses: the first (lowest) numeric value in the subnet for the subnet ID, and the last (highest) numeric value in the subnet for the subnet broadcast address.
+Lesson: Perspectives on IPv4 Subnetting
+Objective: Analyze Subnetting and Addressing Needs
+
+
+Host A is a PC, connected to switch SW1 and assigned to VLAN 1. Which of the following are typically assigned an IP address in the same subnet as host A? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+The local router's WAN interface
+B
+The local router's LAN interface
+C
+All other hosts attached to the same switch
+D
+Other hosts attached to the same switch and also in VLAN 1
+
+Explanation: Answers B and D are correct.
+
+The general rule to determine whether two devices' interfaces should be in the same subnet is whether the two interfaces are separated from each other by a router. To provide a way for hosts in one VLAN to send data to hosts outside that VLAN, a local router must connect its LAN interface to the same VLAN as the hosts, and have an address in the same subnet as the hosts. All the hosts in that same VLAN on the same switch would not be separated from each other by a router, so these hosts would also be in the same subnet. However, another PC, connected to the same switch but in a different VLAN, will require its packets to flow through a router to reach Host A, so Host A's IP address would need to be in a different subnet compared to this new host.
+Lesson: Perspectives on IPv4 Subnetting
+Objective: Analyze Subnetting and Addressing Needs
+
+
+Which of the following are private IP networks? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+172.31.0.0
+B
+172.32.0.0
+C
+192.168.255.0
+D
+192.1.168.0
+E
+11.0.0.0
+
+Explanation: Answers A and C are correct.
+
+The private IPv4 networks, defined by RFC 1918, are Class A network 10.0.0.0, the 16 Class B networks from 172.16.0.0 to 172.31.0.0, and the 256 Class C networks that begin with 192.168.
+Lesson: Perspectives on IPv4 Subnetting
+Objective: Make Design Choices
+
+
+Before Class B network 172.16.0.0 is subnetted by a network engineer, what parts of the structure of the IP addresses in this network already exist, with a specific size? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+Network
+B
+Subnet
+C
+Host
+D
+Broadcast
+
+Explanation: Answers A and C are correct.
+
+An unsubnetted Class A, B, or C network has two parts: the network and host parts.
+Lesson: Perspectives on IPv4 Subnetting
+Objective: Make Design Choices
+
+
+Which of the following are public IP networks? (Choose three answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+9.0.0.0
+B
+172.30.0.0
+C
+192.168.255.0
+D
+192.1.168.0
+E
+1.0.0.0
+
+Explanation: Answers A, D, and E are correct.
+
+The private IPv4 networks, defined by RFC 1918, are Class A network 10.0.0.0, the 16 Class B networks from 172.16.0.0 to 172.31.0.0, and the 256 Class C networks that begin with 192.168. The three correct answers are from the public IP network range, and none are reserved values.
+Lesson: Perspectives on IPv4 Subnetting 
+
+
+A network engineer spends time thinking about the entire Class B network 172.16.0.0, and how to subnet that network. He then chooses how to subnet this Class B network and creates an addressing and subnetting plan, on paper, showing his choices. If you compare his thoughts about this network before subnetting the network, to his thoughts about this network after mentally subnetting the network, which of the following occurred to the parts of the structure of addresses in this network?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+The subnet part got smaller.
+B
+The host part got smaller.
+C
+The network part got smaller.
+D
+The host part was removed.
+E
+The network part was removed.
+
+
+Explanation: Answer B is correct.
+
+An unsubnetted Class A, B, or C network has two parts: the network and host parts. To perform subnetting, the engineer creates a new subnet part by borrowing host bits, shrinking the number of host bits. The subnet part of the address structure exists only after the engineer chooses a nondefault mask. The network part remains a constant size.
+Lesson: Perspectives on IPv4 Subnetting
+Objective: Make Design Choices
+
+
+Which of the following are not valid Class A network IDs? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+1.0.0.0
+B
+130.0.0.0
+C
+127.0.0.0
+D
+9.0.0.0
+
+Explanation: Answers B and C are correct.
+
+Class A networks have a first octet in the range of 1-126, inclusive, and their network IDs have a 0 in the last three octets. 130.0.0.0 is actually a Class B network (first octet range 128-191, inclusive). All addresses that begin with 127 are reserved, so 127.0.0.0 is not a Class A network.
+Lesson: Analyzing Classful IPv4 Networks
+Objective: Classful Network Concepts
+
+
+Which of the following are true about IP address 192.168.6.7's IP network? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+The network ID is 192.168.6.0.
+B
+The network is a Class B network.
+C
+The default mask for the network is 255.255.255.0.
+D
+The number of host bits in the unsubnetted network is 16.
+
+
+Explanation: Answers A and C are correct.
+
+The first octet (192) is in the range of values for Class C addresses (192-223). As a result, the network ID can be formed by copying the first three octets (192.168.6) and writing 0 for the last octet (192.168.6.0). The default mask for all Class C networks is 255.255.255.0, and the number of host bits in all unsubnetted Class C networks is 8.
+Lesson: Analyzing Classful IPv4 Networks
+Objective: Classful Network Concepts
+
+
+Which of the following are true about IP address 172.16.99.45's IP network? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+The network ID is 172.0.0.0.
+B
+The network is a Class B network.
+C
+The default mask for the network is 255.255.255.0.
+D
+The number of host bits in the unsubnetted network is 16.
+
+
+Explanation: Answers B and D are correct.
+
+The first octet (172) is in the range of values for Class B addresses (128-191). As a result, the network ID can be formed by copying the first two octets (172.16) and writing 0s for the last two octets (172.16.0.0). The default mask for all Class B networks is 255.255.0.0, and the number of host bits in all unsubnetted Class B networks is 16.
+Lesson: Analyzing Classful IPv4 Networks
+Objective: Classful Network Concepts
+
+
+Which of the following is a network broadcast address?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+10.1.255.255
+B
+192.168.255.1
+C
+224.1.1.255
+D
+172.30.255.255
+
+
+Explanation: Answer D is correct.
+
+To find the network broadcast address, first determine the class, and then determine the number of host octets. At that point, convert the host octets to 255 to create the network broadcast address. In this case, 10.1.255.255 is in a Class A network, with the last three octets as host octets, for a network broadcast address of 10.255.255.255. For 192.168.255.1, it is a Class C address, with the last octet as the host part, for a network broadcast address of 192.168.255.255. Address 224.1.1.255 is a class D address, so it is not in any unicast IP network, so the question does not apply. For 172.30.255.255, it is a Class B address, with the last two octets as host octets, so the network broadcast address is 172.30.255.255.
+Lesson: Analyzing Classful IPv4 Networks
+Objective: Classful Network Concepts
+
+
+Which of the following are not valid Class B network IDs?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+130.0.0.0
+B
+191.255.0.0
+C
+128.0.0.0
+D
+150.255.0.0
+E
+All are valid Class B network IDs.
+
+
+Explanation: Answer E is correct.
+
+Class B networks all begin with values between 128 and 191, inclusive, in their first octets. The network ID has any value in the 128-191 range in the first octet, and any value from 0-255 inclusive in the second octet, with decimal 0s in the final two octets. Two of the answers show a 255 in the second octet, which is acceptable. Two of the answers show a 0 in the second octet, which is also acceptable.
+Lesson: Analyzing Classful IPv4 Networks 
