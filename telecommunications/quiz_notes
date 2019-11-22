@@ -2252,3 +2252,559 @@ Explanation: Answer E is correct.
 
 Class B networks all begin with values between 128 and 191, inclusive, in their first octets. The network ID has any value in the 128-191 range in the first octet, and any value from 0-255 inclusive in the second octet, with decimal 0s in the final two octets. Two of the answers show a 255 in the second octet, which is acceptable. Two of the answers show a 0 in the second octet, which is also acceptable.
 Lesson: Analyzing Classful IPv4 Networks 
+
+
+Which of the following answers lists the prefix (CIDR) format equivalent of 255.255.255.240?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+/26
+B
+/28
+C
+/27
+D
+/30
+E
+/29
+
+Explanation: Answer B is correct.
+
+Thinking about the conversion one octet at a time, the first three octets each convert to 8 binary 1s. 240 converts to 8-bit binary 11110000, so the total number of binary 1s (which defines the prefix length) is 8 + 8 + 8 + 4 = /28.
+Lesson: Analyzing Subnet Masks
+Objective: Subnet Mask Conversion
+
+
+Which of the following statements is true about classless IP addressing concepts?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+Uses a 128-bit IP address
+B
+Applies only for Class A and B networks
+C
+Separates IP addresses into network, subnet, and host parts
+D
+Ignores Class A, B, and C network rules
+
+
+Explanation: Answer D is correct.
+
+Classless addressing rules define a two-part IP address structure: the prefix and the host part. This logic ignores Class A, B, and C rules, and can be applied to the 32-bit IPv4 addresses from any address class. By ignoring Class A, B, and C rules, classless addressing ignores any distinction as to the network part of an IPv4 address.
+Lesson: Analyzing Subnet Masks
+Objective: Subnet Mask Conversion
+
+
+Which of the following masks, when used as the only mask within a Class B network, would supply enough subnet bits to support 100 subnets? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+/24
+B
+255.255.255.252
+C
+/20
+D
+255.255.252.0
+
+
+Explanation: Answers A and B are correct.
+
+The masks in binary define a number of binary 1s, and the number of binary 1s defines the length of the prefix (network + subnet) part. With a Class B network, the network part is 16 bits. To support 100 subnets, the subnet part must be at least 7 bits long. Six subnet bits would supply only 26 = 64 subnets, while 7 subnet bits supply 27 = 128 subnets. The /24 answer supplies 8 subnet bits, and the 255.255.255.252 answer supplies 14 subnet bits.
+Lesson: Analyzing Subnet Masks
+Objective: Subnet Mask Conversion
+
+
+Which of the following answers lists the dotted-decimal notation (DDN) equivalent of /30?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+255.255.255.192
+B
+255.255.255.252
+C
+255.255.255.240
+D
+255.255.254.0
+E
+255.255.255.0
+
+
+Explanation: Answer B is correct.
+
+/30 is the equivalent of the mask that in binary has 30 binary 1s. To convert that to DDN format, write down all the binary 1s (30 in this case), followed by binary 0s for the remainder of the 32-bit mask. Then take 8 bits at a time, and convert from binary to decimal (or memorize the nine possible DDN mask octet values and their binary equivalents). Using the /30 mask in this question, the binary mask is 11111111 11111111 11111111 11111100. Each of the first three octets is all binary 1s, so each converts to 255. The last octet, 11111100, converts to 252, for a DDN mask of 255.255.255.252. See Appendix A for a decimal/binary conversion table.
+Lesson: Analyzing Subnet Masks
+Objective: Subnet Mask Conversion
+
+
+Which of the following answers lists the prefix (CIDR) format equivalent of 255.255.254.0?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+/19
+B
+/20
+C
+/23
+D
+/24
+E
+/25
+
+
+Explanation: Answer C is correct.
+
+Thinking about the conversion one octet at a time, the first two octets each convert to 8 binary 1s. 254 converts to 8-bit binary 11111110, and decimal 0 converts to 8-bit binary 00000000. So, the total number of binary 1s (which defines the prefix length) is 8 + 8 + 7 + 0 = /23.
+Lesson: Analyzing Subnet Masks
+
+
+Working at the help desk, you receive a call and learn a user's PC IP address and mask (192.168.9.1/27). When thinking about this using classful logic, you determine the number of network (N), subnet (S), and host (H) bits. Which of the following is true in this case?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+N=24
+B
+S=24
+C
+H=8
+D
+H=7
+
+
+Explanation: Answer A is correct.
+
+The size of the network part is always either 8, 16, or 24 bits, based on whether it is Class A, B, or C, respectively. As a Class C address, N=24. The number of subnet bits is the difference between the prefix length (27) and N, so S=3 in this case. The size of the host part is a number that, when added to the prefix length (27), gives you 32, so H=5 in this case.
+Lesson: Analyzing Subnet Masks
+Objective: Identifying Subnet Design Choices Using Masks
+
+
+Working at the help desk, you receive a call and learn a user's PC IP address and mask (10.55.66.77, mask 255.255.255.0). When thinking about this using classful logic, you determine the number of network (N), subnet (S), and host (H) bits. Which of the following is true in this case?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+N=12
+B
+S=12
+C
+H=8
+D
+S=8
+E
+N=24
+
+
+Explanation: Answer C is correct.
+
+The size of the network part is always either 8, 16, or 24 bits, based on whether it is Class A, B, or C, respectively. As a Class A address, N=8. The mask 255.255.255.0, converted to prefix format, is /24. The number of subnet bits is the difference between the prefix length (24) and N, so S=16 in this case. The size of the host part is a number that, when added to the prefix length (24), gives you 32, so H=8 in this case.
+Lesson: Analyzing Subnet Masks
+Objective: Identifying Subnet Design Choices Using Masks
+
+
+When thinking about an IP address using classful addressing rules, an address can have three parts: network, subnet, and host. If you examined all the addresses in one subnet, in binary, which of the following answers correctly states which of the three parts of the addresses will be equal among all addresses? (Choose the best answer.)
+
+A
+Network part only
+B
+Subnet part only
+C
+Host part only
+D
+Network and subnet parts
+E
+Subnet and host parts
+
+
+Explanation: Answer D is correct.
+
+When using classful IP addressing concepts as described in Chapter 14, "Analyzing Subnet Masks," addresses have three parts: network, subnet, and host. For addresses in a single classful network, the network parts must be identical for the numbers to be in the same network. For addresses in the same subnet, both the network and subnet parts must have identical values. The host part differs when comparing different addresses in the same subnet.
+Lesson: Analyzing Existing Subnets
+Objective: Defining a Subnet
+
+
+Which of the following is the resident subnet for IP address 192.168.44.97/30?
+
+A
+192.168.44.0
+B
+192.168.44.64
+C
+192.168.44.96
+D
+192.168.44.128
+
+
+Explanation: Answer C is correct.
+
+First, the resident subnet (the subnet ID of the subnet in which the address resides) must be numerically smaller than the IP address, which rules out one of the answers. The mask converts to 255.255.255.252. As such, you can copy the first three octets of the IP address because of their value of 255. For the fourth octet, the subnet ID value must be a multiple of 4, because 256 − 252 (mask) = 4. Those multiples include 96 and 100, and the right choice is the multiple closest to the IP address value in that octet (97) without going over. So, the correct subnet ID is 192.168.44.96.
+Lesson: Analyzing Existing Subnets 
+
+
+Which of the following statements are true regarding the binary subnet ID, subnet broadcast address, and host IP address values in any single subnet? (Choose two answers.)
+
+
+A
+The host part of the broadcast address is all binary 0s.
+B
+The host part of the subnet ID is all binary 0s.
+C
+The host part of a usable IP address can have all binary 1s.
+D
+The host part of any usable IP address must not be all binary 0s.
+
+
+Explanation: Answers B and D are correct.
+
+In any subnet, the subnet ID is the smallest number in the range, the subnet broadcast address is the largest number, and the usable IP addresses sit between them. All numbers in a subnet have identical binary values in the prefix part (classless view) and network + subnet part (classful view). To be the lowest number, the subnet ID must have the lowest possible binary value (all 0s) in the host part. To be the largest number, the broadcast address must have the highest possible binary value (all binary 1s) in the host part. The usable addresses do not include the subnet ID and subnet broadcast address, so the addresses in the range of usable IP address never have a value of all 0s or 1s in their host parts.
+Lesson: Analyzing Existing Subnets
+Objective: Analyzing Existing Subnets: Binary
+
+
+Which of the following is the resident subnet ID for IP address 10.7.99.133/24?
+
+
+A
+10.0.0.0
+B
+10.7.0.0
+C
+10.7.99.0
+D
+10.7.99.128
+
+
+Explanation: Answer C is correct.
+
+The mask converts to 255.255.255.0. To find the subnet ID, for each octet of the mask that is 255, you can copy the IP address's corresponding values. For mask octets of decimal 0, you can record a 0 in that octet of the subnet ID. As such, copy the 10.7.99 and write a 0 for the fourth octet, for a subnet ID of 10.7.99.0.
+Lesson: Analyzing Existing Subnets
+Objective: Analyzing Existing Subnets: Binary
+
+
+A fellow engineer tells you to configure the DHCP server to lease the last 100 usable IP addresses in subnet 10.1.4.0/23. Which of the following IP addresses could be leased as a result of your new configuration?
+
+
+A
+10.1.4.156
+B
+10.1.4.254
+C
+10.1.5.200
+D
+10.1.7.200
+E
+10.1.255.200
+
+
+
+Explanation: Answer C is correct.
+
+To answer this question, you need to find the range of addresses in the subnet, which typically then means you need to calculate the subnet ID and subnet broadcast address. With subnet ID/mask of 10.1.4.0/23, the mask converts to 255.255.254.0. To find the subnet broadcast address, following the decimal process described in this chapter, you can copy the subnet ID's first two octets because the mask's value is 255 in each octet. You write a 255 in the fourth octet because the mask has a 0 on the fourth octet. In octet 3, the interesting octet, add the magic number (2) to the subnet ID's value (4), minus 1, for a value of 2 + 4 − 1 = 5. (The magic number in this case is calculated as 256 − 254 = 2.) That makes the broadcast address 10.1.5.255. The last usable address is 1 less: 10.1.5.254. The range that includes the last 100 addresses is 10.1.5.155−10.1.5.254.
+Lesson: Analyzing Existing Subnets
+Objective: Analyzing Existing Subnets: Decimal
+
+
+Which of the following is the subnet broadcast address for the subnet in which IP address 172.31.77.201/27 resides?
+
+
+A
+172.31.201.255
+B
+172.31.255.255
+C
+172.31.77.223
+D
+172.31.77.207
+
+
+Explanation: Answer C is correct.
+
+The resident subnet ID in this case is 172.31.77.192. You can find the subnet broadcast address based on the subnet ID and mask using several methods. Following the decimal process in the book, the mask converts to 255.255.255.224, making the interesting octet be octet 4, with magic number 256 − 224 = 32. For the three octets where the mask = 255, copy the subnet ID (172.31.77). For the interesting octet, take the subnet ID value (192), add magic (32), and subtract 1, for 223. That makes the subnet broadcast address 172.31.77.223.
+Lesson: Analyzing Existing Subnets
+Objective: Analyzing Existing Subnets: Decimal
+
+
+A PC user opens a command prompt and uses the ipconfig command to see that the PC's IP address and mask are 192.168.4.77 and 255.255.255.224. The user then runs a test using the ping 192.168.4.117 command. Which of the following answers is the most likely to happen?
+
+
+A
+The PC sends packets directly to the host with address 192.168.4.117.
+B
+The PC sends packets to its default gateway.
+C
+The PC sends a DNS query for 192.168.4.117.
+D
+The PC sends an ARP looking for the MAC address of the DHCP server.
+
+
+Explanation: Answer B is correct.
+
+PCs use two-option logic: send local packets (destined for hosts in the same subnet) directly, and send remote packets (destined for hosts in other subnets) to the default gateway/router. In this case, the PC's own IP address is 192.168.4.77, with mask 255.255.255.224, so it is in subnet 192.168.4.64/27. This subnet has a range of addresses from 192.168.4.64 to 192.168.4.95, including the subnet and broadcast address. As a result, the PC sends the packet to its default gateway. As for the other incorrect answers, if the ping command had used a hostname, it would have first asked a DNS server to resolve the name. Also, the PC already has an IP address, so DHCP would not be needed.
+Lesson: Configuring IPv4 Addresses and Static Routes
+Objective: IP Routing
+
+
+Router R1 lists a route in its routing table. Which of the following answers list a fact from a route that the router then compares to the packet's destination address? (Choose two answers.)
+
+A
+Mask
+B
+Next-hop router
+C
+Subnet ID
+D
+Outgoing interface
+
+
+Explanation: Answers A and C are correct.
+
+The route defines the group of addresses represented by the route using the subnet ID and mask. The router can use those numbers to find the range of addresses that should be matched by this route. The other two answers list facts useful when forwarding packets that happen to match the route.
+Lesson: Configuring IPv4 Addresses and Static Routes
+Objective: IP Routing
+
+
+A Layer 3 switch has been configured to route IP packets between VLANs 1, 2, and 3, which connect to subnets 172.20.1.0/25, 172.20.2.0/25, and 172.20.3.0/25, respectively. The engineer issues a show ip route command on the Layer 3 switch, listing the connected routes. Which of the following answers lists a piece of information that should be in at least one of the routes?
+
+
+A
+Interface Gigabit Ethernet 0/0.3
+B
+Next-hop router 172.20.4.1
+C
+Interface VLAN 2
+D
+Mask 255.255.255.0
+
+
+Explanation: Answer C is correct.
+
+The configuration of the Layer 3 switch's routing feature uses VLAN interfaces, with the interface number matching the VLAN ID. The matching connected routes, like all connected IP routes, will list the interfaces but not a next-hop IP address. The three connected routes will list the VLAN interfaces 1, 2, and 3, respectively.
+Lesson: Configuring IPv4 Addresses and Static Routes
+Objective: Configuring IP Addresses and Connected Routes
+
+
+Router 1 has a Fast Ethernet interface 0/0 with IP address 10.1.1.1. The interface is connected to a switch. This connection is then migrated to use 802.1Q trunking. Which of the following commands could be part of a valid configuration for Router 1's Fa0/0 interface? (Choose two answers.)
+
+
+A
+interface fastethernet 0/0.4
+B
+dot1q enable
+C
+dot1q enable 4
+D
+trunking enable
+E
+trunking enable 4
+F
+encapsulation dot1q 4
+
+
+Explanation: Answers A and F are correct.
+
+Of all the commands listed, only the two correct answers are syntactically correct router configuration commands. The command to enable 802.1Q trunking is encapsulation dot1q vlan_id.
+Lesson: Configuring IPv4 Addresses and Static Routes
+Objective: Configuring IP Addresses and Connected Routes
+
+
+A network engineer configures the ip route 10.1.1.0 255.255.255.0 s0/0/0 command on a router, and then issues a show ip route command from enable mode. No routes for subnet 10.1.1.0/24 appear in the output. Which of the following could be true?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+The ip route command has incorrect syntax and was rejected in config mode.
+B
+Interface s0/0/0 is down.
+C
+The router has no up/up interfaces in class A network 10.0.0.0.
+D
+The ip route command is missing a next-hop router IP address.
+
+
+Explanation: Answer B is correct.
+
+The ip route command can reference an outgoing interface or a next-hop IP address, which rules out one answer. The command does use the correct syntax, ruling out another answer. There is no requirement for a router to have any particular interface IP addresses in relation to the configuration of an ip route command, ruling out yet another answer.
+
+The checks that IOS uses when looking at a new ip route command include: is the outgoing interface up/up, is the next-hop address reachable, and if there is a competing route from another source, does the other route have a better administrative distance.
+Lesson: Configuring IPv4 Addresses and Static Routes
+Objective: Configuring Static Routes
+
+
+An engineer configures a static IPv4 route on Router R1. Which of the following pieces of information should not be listed as a parameter in the configuration command that creates this static IPv4 route?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+The destination subnet's subnet ID
+B
+The next-hop router's IP address
+C
+The next-hop router's neighboring interface
+D
+The subnet mask
+
+
+Explanation: Answer C is correct.
+
+The ip route command can refer to the IP address of the next-hop router or to the local router's interface. It also refers to the subnet ID and matching subnet mask, defining the range of addresses matched by the route.
+Lesson: Configuring IPv4 Addresses and Static Routes
+Objective: Configuring Static Routes
+
+
+Which of the following commands correctly configures a static route?
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+ip route 10.1.3.0 255.255.255.0 10.1.130.253
+B
+ip route 10.1.3.0 serial 0
+C
+ip route 10.1.3.0 /24 10.1.130.253
+D
+ip route 10.1.3.0 /24 serial 0
+
+
+Explanation: Answer A is correct.
+
+The correct syntax lists a subnet number, then a subnet mask in dotted-decimal form, and then either an outgoing interface or a next-hop IP address.
+Lesson: Configuring IPv4 Addresses and Static Routes
+Objective: Configuring Static Routes
+
+
+A PC connects to a LAN and uses DHCP to lease an IP address for the first time. Of the usual four DHCP messages that flow between the PC and the DHCP server, which ones do the client send? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+A
+Acknowledgment
+B
+Discover
+C
+Offer
+D
+Request
+
+
+Explanation: Answers B and D are correct.
+
+The client sends a Discover message, with the server returning an Offer message. The client then sends a Request, with the server sending back the IP address in the Acknowledgment message.
+Lesson: DHCP and IP Networking on Hosts
+Objective: Implementing and Troubleshooting DHCP
+
+
+An enterprise puts the DHCP and DNS servers on VLAN 10/subnet 10 in Atlanta, using IP address 10.1.10.1 for the DHCP server and 10.1.10.2 for the DNS server. A remote router sits in Boston, with devices on the Boston LAN using the DHCP and DNS servers in Atlanta. Which of the following needs to be configured in the routers in this enterprise to support DHCP and DNS?
+
+
+A
+The ip helper-address 10.1.10.1 command in the Atlanta router
+B
+The ip helper-address 10.1.10.2 command in the Boston router
+C
+The ip name-server 10.1.10.2 command in the Atlanta router
+D
+The ip dhcp-server 10.1.10.1 command in the Boston router
+E
+None of the other answers is correct.
+
+
+Explanation: Answer E is correct.
+
+Of the commands in the answers, three list syntactically correct commands, but one does not: ip dhcp-server 10.1.10.1. The answer with this command is incorrect. The ip helper-address 10.1.10.1 command is indeed needed as an interface subcommand, but only on remote routers like the Boston router. This command is not needed for the DNS server, so while the ip helper-address 10.1.10.2 command would be accepted, it does not help DNS or DHCP work. Finally, the ip name-server 10.1.10.2 command on the Atlanta router works, but it simply lets users of the Atlanta router CLI make use of the DNS server; it has no effect on user DNS traffic.
+
+The Boston router would need an ip helper-address 10.1.10.1 command, so that the Boston router could forward DHCP requests to the DHCP server in Atlanta.
+Lesson: DHCP and IP Networking on Hosts
+Objective: Implementing and Troubleshooting DHCP
+
+
+Fred decides to migrate from an old DHCP server platform to use a Cisco router at the headquarters building. This DHCP server, created with configuration in IOS on a Cisco router, supports 200 remote subnets. Which of the following settings are made outside of a per-subnet pool of addresses?
+
+
+A
+Client IP address
+B
+Addresses in that subnet excluded from being leased by the server
+C
+Default router
+D
+DNS server
+E
+Length of address lease
+
+
+Explanation: Answer B is correct.
+
+The configuration puts the per-client settings in a DHCP pool: client IP address, mask, default router, and DNS server IP addresses. The pool also lists the length of time for which the client can keep the lease for the address. Only the exclude list (ip dhcp exclude-address) sits outside the DHCP pool.
+Lesson: DHCP and IP Networking on Hosts
+Objective: Implementing and Troubleshooting DHCP
+
+
+PC1, a new PC, just booted for the first time when connected to an enterprise network. PC1 used DHCP to lease IP address 10.1.1.1, learning mask 255.255.255.0, DNS server 10.9.9.9, and default gateway 10.1.1.2, with a lease time of 7 days. Assume that the PC has sent nothing else over the network because the DHCP process completed. The user then opens a web browser and types www.ciscopress.com. Which of the following actions happens next? 
+
+
+A
+PC1 sends an ARP request to find the web server’s MAC address
+B
+PC1 sends an ARP request to find the default gateway’s (10.1.1.2) MAC address
+C
+PC1 sends a DNS request about www.ciscopress.com to the DNS server (10.9.9.9)
+D
+PC1 sends an IP packet to the www.ciscopress.com web server IP address
+
+
+Explanation: Answer B is correct.
+
+If a host does not yet have an IPv4 address assigned to it, the first action should be to try and lease an address with DHCP. The question begins as if that process had completed, but also that nothing else had happened on the network. That statement is meant to say that no ARPs had flows, no DNS messages had flowed, and certainly no user messages.
+
+When the user types www.ciscopress.com into his browser window, PC1 needs to resolve the name into its IPv4 address. However, the DNS, 10.9.9.9, is on a different subnet than PC1. PC1 does not learn an ARP entry for the default router during the DHCP process. (Remember, all those DHCP messages sent by the DHCP client are not sent to the router’s MAC address.) So although PC1’s next primary action is to resolve the name www.ciscopress.com into its IP address, the next message in an ARP Request for 10.1.1.2 from PC1, so that PC1 can then know R1’s MAC address, and forward the DNS request to router R1.
+
+Of the incorrect answers, after the ARP request to find the default router’s MAC address, PC1 will send a DNS request, and then send an IP packet to the server’s IP address. And if the server just happens to be in the same subnet as PC1, PC1 would also ARP to find the web server’s IP address.
+Lesson: DHCP and IP Networking on Hosts
+Objective: Verifying Host IPv4 Settings
+
+
+A packet is sent to a destination address. That single packet is routed through the network to the final router, which then sends the packet to all hosts connected to that one subnet. Which of the following IP address types was used as the destination IP address?
+
+
+A
+A unicast address
+B
+A network broadcast address
+C
+A subnet broadcast address
+D
+A multicast address
+
+
+Explanation: Answer C is correct.
+
+By definition, a subnet broadcast (a packet sent to a subnet broadcast address), also called a directed broadcast, is routed like any other packet until it arrives at a router connected to that subnet. For that last forwarding step, the router encapsulates the IP packet in an Ethernet broadcast frame (destination MAC address FFFF.FFFF.FFFF), so that all hosts in the destination subnet receive a copy.
+
+A unicast packet would not be forwarded as a data link broadcast at the last step.
+
+A network broadcast would be replicated by different routers as needed so that it was delivered to all subnets in the classful network.
+
+A multicast packet would be delivered to a subset of subnets, depending on which subnets had hosts who had formerly asked to receive packets sent to that particular multicast address. 
+Lesson: DHCP and IP Networking on Hosts
+Objective: IPv4 Address Types
+
+
+A packet is sent to a destination address. That single packet is replicated by a few routers based on the routers’ knowledge of hosts that had earlier registered to receive packets sent to that destination address. The routers do not forward copies of the packet onto subnets where no hosts have registered, and do forward copies of the packet onto subnets where at least one host has registered to receive those packets. Which of the following IP address types was used as the destination IP address?
+
+
+
+A
+A unicast address
+B
+A network broadcast address
+C
+A subnet broadcast address
+D
+A multicast address
+
+
+Explanation: Answer D is correct.
+
+By definition, a multicast IP packet (a packet sent to a Class D IP multicast address) is copied as necessary by routers to make extra copies, and forwarded to multiple routers as needed, but not all. The logic revolves around prior knowledge of a host registration process by which hosts declare their interest in receiving packets sent to a particular multicast IP address. Routers exchange this information, so that when a new multicast packet arrives, the routers know where to send copies of that particular multicast packet, and where to not bother to send the packet (because no hosts in that part of the network registered to receive a copy).
+
+A unicast packet would not be forwarded as a data link broadcast at the last step.
+
+A network broadcast would be replicated by different routers as needed so that it was delivered to all subnets in the classful network.
+
+A subnet broadcast would be router as a single packet to the final router in the path. That router would then forward the IP packet as a LAN broadcast so that all hosts in that subnet would receive a copy.
+Lesson: DHCP and IP Networking on Hosts
+Objective: IPv4 Address Types
