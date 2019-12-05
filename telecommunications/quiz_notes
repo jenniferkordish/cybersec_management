@@ -766,6 +766,8 @@ Explanation: Answer C is correct.
 The first (numerically lowest) subnet ID is the same number as the classful network number, or 192.168.9.0. The remaining subnet IDs are each 8 larger than the previous subnet ID, in sequence, or 192.168.9.8, 192.168.9.16, 192.168.9.24, 192.168.9.32, and so on, through 192.168.9.248.
 Lesson: Subnet Design
 Objective: Finding All Subnet IDs
+
+
 An engineer has calculated the list of subnet IDs, in consecutive order, for network 172.30.0.0, assuming that the /22 mask is used throughout the network. Which of the following are true? (Choose two answers.)
 
 A Any two consecutive subnet IDs differ by a value of 22 in the third octet.
@@ -2808,3 +2810,35 @@ A network broadcast would be replicated by different routers as needed so that i
 A subnet broadcast would be router as a single packet to the final router in the path. That router would then forward the IP packet as a LAN broadcast so that all hosts in that subnet would receive a copy.
 Lesson: DHCP and IP Networking on Hosts
 Objective: IPv4 Address Types
+
+
+An IP subnetting design effort is under way at a company. So far, the senior engineer has decided to use Class B network 172.23.0.0. The design calls for 100 subnets, with the largest subnet needing 500 hosts. Management requires that the design accommodate 50 percent growth in the number of subnets and the size of the largest subnet. The requirements also state that a single mask must be used throughout the Class B network. How many masks meet the requirements?
+
+A 0
+B 1
+C 2
+D 3+
+
+
+Explanation: Answer A is correct.
+
+With 50 percent growth, the mask needs to define enough subnet bits to create 150 subnets. As a result, the mask needs at least 8 subnet bits (7 subnet bits supply 27, or 128, subnets, and 8 subnet bits supply 28, or 256, subnets). Similarly, the need for 50 percent growth in the size for the largest subnet means that the host part needs enough bits to number 750 hosts/subnet. Nine host bits are not enough (29 - 2 = 510), but 10 host bits supply 1022 hosts/subnet (210 - 2 = 1022). With 16 network bits existing because of the choice to use a Class B network, the design needs a total of 34 bits (at least) in the mask (16 network, 8 subnet, 10 host), but only 32 bits exist - so no single mask meets the requirements.
+Lesson: Subnet Design
+Objective: Choosing the Mask(s) to Meet Requirements
+
+
+DNS: Domain Name System. An application layer protocol used throughout the Internet for translating host names into their associated IP addresses. 
+
+Extended ping: An IOS command in which the ping command accepts many other options besides just the destination IP address. 
+
+Forward route: From one host’s perspective, the route over which a packet travels from that host to some other host. 
+
+ICMP echo reply: One type of ICMP message, created specifically to be used as the message sent by the ping command to test connectivity in a network. The ping command expects to receive these messages from other hosts, after the ping command first sends an ICMP echo request message to the host. 
+
+ICMP echo request: One type of ICMP message, created specifically to be used as the message sent by the ping command to test connectivity in a network. The ping command sends these messages to other hosts, expecting the other host to reply with an ICMP echo reply message. 
+
+Ping: An Internet Control Message Protocol (ICMP) echo message and its reply; ping often is used in IP networks to test the reachability of a network device. 
+
+Reverse route: From one host’s perspective, for packets sent back to the host from another host, the route over which the packet travels. 
+
+Traceroute: A program available on many systems that traces the path that a packet takes to a destination. It is used mostly to debug routing problems between hosts. 
