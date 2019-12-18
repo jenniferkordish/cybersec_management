@@ -2842,3 +2842,454 @@ Ping: An Internet Control Message Protocol (ICMP) echo message and its reply; pi
 Reverse route: From one host’s perspective, for packets sent back to the host from another host, the route over which the packet travels. 
 
 Traceroute: A program available on many systems that traces the path that a packet takes to a destination. It is used mostly to debug routing problems between hosts. 
+
+
+Which of the following answers list a valid number that can be used with standard numbered IP ACLs? (Choose two answers.)
+
+
+A 1987
+B 2187
+C 187
+D 87
+
+Explanation: Answers A and D are correct.
+
+The range of valid ACL numbers for standard numbered IP ACLs is 1-99 and 1300-1999, inclusive.
+Lesson: Basic IPv4 Access Control Lists
+Objective: IPv4 Access Control List Basics
+
+
+Which of the following wildcard masks is most useful for matching all IP packets in subnet 10.1.128.0, mask 255.255.255.0?
+
+A 0.0.0.0
+B 0.0.0.31
+C 0.0.0.240
+D 0.0.0.255
+E 0.0.15.0
+F 0.0.248.255
+Explanation: Answer D is correct.
+
+0.0.0.255 matches all packets that have the same first three octets. This is useful when you want to match a subnet in which the subnet part comprises the first three octets, as in this case.
+Lesson: Basic IPv4 Access Control Lists
+Objective: Standard Numbered IPv4 ACLs
+
+
+Which of the following fields cannot be compared based on an extended IP ACL? (Choose two answers.)
+
+
+A Protocol
+B Source IP address
+C Destination IP address
+D TOS byte
+E URL
+F Filename for FTP transfers
+
+Explanation: Answers E and F are correct.
+
+Extended ACLs can look at the Layer 3 (IP) and Layer 4 (TCP, UDP) headers and a few others, but not any application layer information. Named extended ACLs can look for the same fields as numbered extended ACLs.
+Lesson: Advanced IPv4 Access Control Lists
+Objective: Extended Numbered IP Access Control Lists
+
+
+In a router running a recent IOS version (at least version 15.0), an engineer needs to delete the second line in ACL 101, which currently has four commands configured. Which of the following options could be used? (Choose two answers.)
+
+
+A Delete the entire ACL and reconfigure the three ACL statements that should remain in the ACL.
+B Delete one line from the ACL using the no access-list... global command.
+C Delete one line from the ACL by entering ACL configuration mode for the ACL and then deleting only the second line based on its sequence number.
+D Delete the last three lines from the ACL from global configuration mode, and then add the last two statements back into the ACL.
+
+Explanation: Answers A and C are correct.
+
+Before IOS 12.3, numbered ACLs must be removed and then reconfigured to remove a line from the ACL. As of IOS 12.3, you can also use ACL configuration mode and sequence numbers to delete one ACL line at a time.
+Lesson: Advanced IPv4 Access Control Lists
+
+
+Which of the following access-list commands permit packets going from host 10.1.1.1 to all web servers whose IP addresses begin with 172.16.5? (Choose two answers.)
+
+A access-list 101 permit tcp host 10.1.1.1 172.16.5.0 0.0.0.255 eq www
+B access-list 1951 permit ip host 10.1.1.1 172.16.5.0 0.0.0.255 eq www
+C access-list 2523 permit ip host 10.1.1.1 eq www 172.16.5.0 0.0.0.255
+D access-list 2523 permit tcp host 10.1.1.1 eq www 172.16.5.0 0.0.0.255
+E access-list 2523 permit tcp host 10.1.1.1 172.16.5.0 0.0.0.255 eq www
+
+Explanation: Answers A and E are correct.
+
+The correct range of ACL numbers for extended IP access lists is 100 to 199 and 2000 to 2699. The answers that list the eq www parameter after 10.1.1.1 match the source port number, and the packets are going toward the web server, not away from it.
+Lesson: Advanced IPv4 Access Control Lists
+Objective: Extended Numbered IP Access Control Lists
+
+
+Which of the following access-list commands permits packets going to any web client from all web servers whose IP addresses begin with 172.16.5?
+
+
+A access-list 101 permit tcp host 10.1.1.1 172.16.5.0 0.0.0.255 eq www
+B access-list 1951 permit ip host 10.1.1.1 172.16.5.0 0.0.0.255 eq www
+C access-list 2523 permit tcp any eq www 172.16.5.0 0.0.0.255
+D access-list 2523 permit tcp 172.16.5.0 0.0.0.255 eq www 172.16.5.0 0.0.0.255
+E access-list 2523 permit tcp 172.16.5.0 0.0.0.255 eq www any
+
+Explanation: Answer E is correct.
+
+Because the packet is going toward any web client, you need to check for the web server’s port number as a source port. The client IP address range is not specified in the question, but the servers are, so the source address beginning with 172.16.5 is the correct answer.
+Lesson: Advanced IPv4 Access Control Lists 
+
+
+An engineer configures an ACL but forgets to save the configuration. At that point, which of the following commands displays the configuration of an IPv4 ACL, including line numbers? (Choose two answers.)
+
+A show running-config
+B show startup-config
+C show ip access-lists
+D show access-lists
+
+Explanation: Answers C and D are correct.
+
+The show ip access-lists and show access-lists commands both display the configuration of IPv4 access lists, including ACL line numbers. Neither the show running-config nor show startup-config commands list the ACL line numbers; in this case, the startup-config file would not contain the ACL configuration at all.
+Lesson: Advanced IPv4 Access Control Lists
+
+
+An engineer is considering configuring an ACL on router R1. The engineer could use ACL A which would be enabled with the ip access-group A out command on interface G0/1, or ACL B, which would be enabled with the ip access-group B in command on that same interface. R1’s G0/1 interface uses IPv4 address 1.1.1.1. Which of the answers is true when comparing these options? (Choose two answers.)
+
+A ACL A creates more risk of filtering important overhead traffic than ACL B.
+B ACL B creates more risk of filtering important overhead traffic than ACL A.
+C A ping 1.1.1.1 command on R1 would bypass ACL A even if enabled.
+D A ping 1.1.1.1 command on R1 would bypass ACL B even if enabled.
+
+Explanation: Answers B and C are correct.
+
+A router bypasses the ACL logic for its own outbound ACLs for packets created by that router. Routers do not make any kind of exception for inbound packets. As a result, ACL B creates more risk than ACL A, because B is enabled as an inbound ACL.
+
+The ping 1.1.1.1 command in two answers is a self-ping of a router’s Ethernet interface. As a result, the router would bypass any outbound ACL logic on that interface, but consider any inbound ACL logic. So router R1 would bypass the logic of ACL A, which would be enabled as an outbound ACL on R1’s G0/1 interface.  
+
+
+Which of the following summarized subnets represent routes that could have been created for CIDR’s goal to reduce the size of Internet routing tables?
+
+A 10.0.0.0 255.255.255.0
+B 10.1.0.0 255.255.0.0
+C 200.1.1.0 255.255.255.0
+D 200.1.0.0 255.255.0.0
+
+Explanation: Answer D is correct.
+
+CIDR’s original intent was to allow the summarization of multiple Class A, B, and C networks to reduce the size of Internet routing tables. Of the answers, only 200.1.0.0 255.255.0.0 summarizes multiple networks.
+Lesson: Network Address Translation
+Objective: Perspectives on IPv4 Address Scalability
+
+
+Which of the following are not private addresses according to RFC 1918? (Choose two answers.)
+
+
+A 172.31.1.1
+B 172.33.1.1
+C 10.255.1.1
+D 10.1.255.1
+E 191.168.1.1
+
+Explanation: Answers B and E are correct.
+
+RFC 1918 identifies private network numbers. It includes Class A network 10.0.0.0, Class B networks 172.16.0.0 through 172.31.0.0, and Class C networks 192.168.0.0 through 192.168.255.0.
+Lesson: Network Address Translation 
+
+With dynamic NAT, performing translation for inside addresses only, what causes NAT table entries to be created
+
+
+A
+The first packet from the inside network to the outside network
+B
+The first packet from the outside network to the inside network
+C
+Configuration using the ip nat inside source command
+D
+Configuration using the ip nat outside source command
+Explanation: Answer A is correct.
+
+With dynamic NAT, the entries are created as a result of the first packet flow from the inside network.
+Lesson: Network Address Translation
+Objective: Network Address Translation Concepts
+
+
+With static NAT, performing translation for inside addresses only, what causes NAT table entries to be created?
+
+
+A
+The first packet from the inside network to the outside network
+B
+The first packet from the outside network to the inside network
+C
+Configuration using the ip nat inside source command
+D
+Configuration using the ip nat outside source command
+Explanation: Answer C is correct.
+
+With static NAT, the entries are statically configured. Because the question mentions translation for inside addresses, the inside keyword is needed in the command.
+Lesson: Network Address Translation 
+
+
+NAT has been configured to translate source addresses of packets for the inside part of the network, but only for some hosts as identified by an access control list. Which of the following commands indirectly identifies the hosts?
+
+A
+ip nat inside source list 1 pool barney
+B
+ip nat pool barney 200.1.1.1 200.1.1.254 netmask 255.255.255.0
+C
+ip nat inside
+D
+ip nat inside 200.1.1.1 200.1.1.2
+Explanation: Answer A is correct.
+
+The list 1 parameter references an IP ACL, which matches packets, identifying the inside local addresses.
+Lesson: Network Address Translation
+Objective: NAT Configuration and Troubleshooting
+
+
+Examine the following show command output on a router configured for dynamic NAT:
+-- Inside Source
+
+access-list 1 pool fred refcount 2288
+
+pool fred: netmask 255.255.255.240
+
+    start 200.1.1.1 end 200.1.1.7
+
+    type generic, total addresses 7, allocated 7 (100%), misses 965
+
+Users are complaining about not being able to reach the Internet. Which of the following is the most likely cause?
+
+
+A
+The problem is not related to NAT, based on the information in the command output.
+B
+The NAT pool does not have enough entries to satisfy all requests.
+C
+Standard ACL 1 cannot be used; an extended ACL must be used.
+D
+The command output does not supply enough information to identify the problem.
+Explanation: Answer B is correct.
+
+The last line mentions that the pool has seven addresses, with all seven allocated, with the misses counter close to 1000 - meaning that close to 1000 new flows were rejected because of insufficient space in the NAT pool.
+Lesson: Network Address Translation
+
+
+Examine the following configuration commands:
+
+interface Ethernet0/0
+
+ip address 10.1.1.1 255.255.255.0
+
+ip nat inside
+
+interface Serial0/0
+
+ip address 200.1.1.249 255.255.255.252
+
+ip nat inside source list 1 interface Serial0/0
+
+access-list 1 permit 10.1.1.0 0.0.0.255
+
+If the configuration is intended to enable source NAT overload, which of the following commands could be useful to complete the configuration? (Choose two answers.)
+
+
+
+A
+The ip nat outside command
+B
+The ip nat pat command
+C
+The overload keyword
+D
+The ip nat pool command
+Explanation: Answers A and C are correct.
+
+The configuration is missing the overload keyword in the ip nat inside source command and in the ip nat outside interface subcommand on the serial interface.
+Lesson: Network Address Translation
+Objective: NAT Configuration and Troubleshooting
+
+
+A Cisco Catalyst switch connects with its Gigabit0/1 port to an end user's PC. The end user, thinking the user is helping, manually sets the PC's OS to use a speed of 1000 Mbps and to use full duplex, and disables the use of autonegotiation. The switch's G0/1 port has default settings for speed and duplex. What speed and duplex settings will the switch decide to use? (Choose two answers.)
+
+This task contains the radio buttons and checkboxes for options. The shortcut keys to perform this task are A to H and alt+1 to alt+9.
+
+
+A Full duplex
+B Half duplex
+C 10 Mbps
+D 1000 Mbps
+Explanation: Answers A and D are correct.
+
+The IEEE autonegotiation rules define that if a device attempts autonegotiation, but the other side does not participate, to use the slowest speed it supports. However, Cisco switches override that logic, instead sampling the electrical signal to detect the speed used by the connected device, so the switch will operate at 1000 Mbps. The switch uses the IEEE default setting for duplex based on the speed, and the IEEE default for duplex when using 1000 Mbps is to use full duplex. So in this case, the switch will match both the speed and duplex setting made on the PC. 
+
+
+In which of the following modes of the CLI could you configure the duplex setting for interface Fast Ethernet 0/5?
+
+
+A User mode
+B Enable mode
+C Global configuration mode
+D VLAN mode
+E Interface configuration mode
+Explanation: Answer E is correct.
+
+Cisco switches can be configured for speed (with the speed command) and duplex (with the duplex command) in interface configuration mode.
+Lesson: Configuring Switch Interfaces
+Objective: Configuring Switch Interfaces
+
+
+Which of the following describes a way to disable IEEE standard autonegotiation on a 10/100 port on a Cisco switch?
+
+
+A Configure the negotiate disable interface subcommand
+B Configure the no negotiate interface subcommand
+C Configure the speed 100 interface subcommand
+D Configure the duplex half interface subcommand
+E Configure the duplex full interface subcommand
+F Configure the speed 100 and duplex full interface subcommands
+Explanation: Answer F is correct.
+
+Cisco switches do not have a command to disable autonegotiation of speed and duplex. Instead, a switch port that has both speed and duplex configured disables autonegotiation. 
+
+
+Which of the following is required when configuring port security with sticky learning?
+
+
+A Setting the maximum number of allowed MAC addresses on the interface with the switchport port-security maximum interface subcommand
+B Enabling port security with the switchport port-security interface subcommand
+C Defining the specific allowed MAC addresses using the switchport port-security mac-address interface subcommand
+D All the other answers list required commands
+Explanation: Answer B is correct.
+
+The setting for the maximum number of MAC addresses has a default of 1, so the switchport port-security maximum command does not have to be configured. With sticky learning, you do not need to predefine the specific MAC addresses either. However, you must enable port security, which requires the switchport port-security interface subcommand.
+Lesson: Configuring Switch Interfaces
+Objective: Port Security
+
+
+
+A Cisco Catalyst switch connects to what should be individual user PCs. Each port has the same port security configuration, configured as follows:
+
+interface range gigabitethernet 0/1 - 24
+switchport mode access
+switchport port-security
+switchport port-security mac-address sticky
+
+
+Which of the following answers describe the result of the port security configuration created with these commands? (Choose two answers.)
+
+
+A Prevents unknown devices with unknown MAC addresses from sending data through the switch ports
+B If a user connects a switch to the cable, prevents multiple devices from sending data through the port
+C Will allow any one device to connect to each port, and will save that device's MAC address into the startup-config
+D Will allow any one device to connect to each port, but will not save that device's MAC address into the startup-config
+Explanation: Answers B and D are correct.
+
+First, about the sticky parameter… this command causes the switch to learn the source MAC, and to add it to a switchport port-security mac-address address interface subcommand. However, port security adds that command to the running-config file; the network engineer must also issue a copy running-config startup-config EXEC command to save that configuration.
+
+About the other correct answer, users can connect a switch to the end of the cable, with multiple devices connected to that switch. That happens in real networks when users decide they need more ports at their desk. However, the default setting of switchport port-security maximum 1 means that a frame from the second unique source MAC address would cause a violation, and with the default violation action, to err-disable the port.
+
+For the other incorrect answer, the configuration does not prevent unknown MAC addresses from accessing the port, because the configuration does not predefine any MAC address.
+Lesson: Configuring Switch Interfaces
+Objective: Port Security
+
+
+A switch's port Gi0/1 has been correctly enabled with port security. The configuration sets the violation mode to restrict. A frame that violates the port security policy enters the interface, followed by a frame that does not. Which of the following answers correctly describe what happens in this scenario? (Choose two answers.)
+
+
+A The switch puts the interface into an err-disabled state when the first frame arrives.
+B The switch generates syslog messages about the violating traffic for the first frame.
+C The switch increments the violation counter for Gi0/1 by 1.
+D The switch discards both the first and second frame.
+Explanation: Answers B and C are correct.
+
+First, about the two incorrect answers: When in restrict mode, the arrival of a frame that violates the port security policy does not cause the switch to put the interface into err-disabled state. It does cause the switch to discard any frames that violate the policy, but it leaves the interface up, and does not discard frames that do not violate the security policy, like the second frame that arrives.
+
+Regarding the two correct answers, a port in port security restrict does cause the switch to issue log messages for a violating frame, send SNMP traps about that same event (if SNMP is configured), and to increment the counter of violating frames.
+Lesson: Configuring Switch Interfaces
+Objective: Port Security
+
+
+Some IOS commands store passwords as clear text, but you can then encrypt the passwords with the service password-encryption global command. By comparison, other commands store a computed hash of the password, rather than storing the password. Comparing the two options, which one answer is the most accurate about why one method is better than the other?
+
+
+A Using hashes is preferred because encrypted IOS passwords can be easily decrypted.
+B Using hashes is preferred because of the large CPU effort required for encryption.
+C Using encryption is preferred because it provides stronger password protection.
+D Using encryption is preferred because of the large CPU effort required for hashes.
+Explanation: Answer A is correct.
+
+The service password-encryption command encrypts passwords on a router or switch that would otherwise be shown in clear text. While a great idea in concept, the algorithm can be easily broken using websites found in the Internet. Cisco long ago provided replacements for commands that store passwords as clear text, instead using hashes - commands like enable secret and username secret. These commands are preferred in part because they avoid the issues of clear-text passwords and easily decrypted passwords.
+Lesson: Device Security Features
+Objective: Securing IOS Passwords
+
+
+A network engineer issues a show running-config command and sees only one line of output that mentions the enable secret command, as follows:
+
+enable secret 5 $1$ZGMA$e8cmvkz4UjiJhVp7.maLE1
+
+
+Which of the following is true about users of this router?
+
+
+A A user must type $1$ZGMA$e8cmvkz4UjiJhVp7.maLE1 to reach enable mode.
+B The router will hash the clear-text password that the user types to compare to the hashed password.
+C A no service password-encryption configuration command would decrypt this password.
+D The router will decrypt the password in the configuration to compare to the clear-text password typed by the user.
+Explanation: Answer B is correct.
+
+The enable secret command stores an MD5 hash of the password. It is unaffected by the service password-encryption command. The router does not unhash the value back to the clear-text password. Instead, when the user types her clear-text password, the router also hashes that password and compares that hashed value with the hashed value as listed in the configuration.
+Lesson: Device Security Features
+Objective: Securing IOS Passwords
+
+
+Imagine that you have configured the enable secret command, followed by the enable password command, from the console. You log out of the switch and log back in at the console. Which command defines the password that you had to enter to access privileged mode?
+
+
+A enable password
+B enable secret
+C Neither
+D The password command, if it's configured
+Explanation: Answer B is correct.
+
+If both commands are configured, IOS accepts only the password as configured in the enable secret command.
+Lesson: Device Security Features
+Objective: Securing IOS Passwords
+
+
+The following command was copied and pasted into configuration mode when a user was telnetted into a Cisco switch:
+
+banner login this is the login banner
+
+
+Which of the following is true about what occurs the next time a user logs in from the console?
+
+
+A
+No banner text is displayed.
+B
+The banner text "his is " is displayed.
+C
+The banner text "this is the login banner" is displayed.
+D
+The banner text "Login banner configured, no text defined" is displayed.
+Explanation: Answer B is correct.
+
+The first nonblank character after the banner login phrase is interpreted as the beginning delimiter character. In this case, it's the letter t. So, the second letter t - the first letter in "the" - is interpreted as the ending delimiter. The resulting login banner is the text between these two ts - namely, "his is ".
+Lesson: Device Security Features
+Objective: Cisco Device Hardening
+
+
+A single-line ACL has been added to a router configuration using the command ip access-list 1 permit 172.16.4.0 0.0.1.255. The configuration also includes the ip access-class 1 in command in VTY configuration mode. Which answer accurately describes how the router uses ACL 1?
+
+
+A
+Hosts in subnet 172.16.4.0/23 alone can telnet into the router.
+B
+CLI users cannot telnet from the router to hosts in subnet 172.16.4.0/23 alone.
+C
+Hosts in subnet 172.16.4.0/23 alone can log in but cannot reach enable mode of the router.
+D
+The router will only forward packets with source addresses in subnet 172.16.4.0/23.
+Explanation: Answer A is correct.
+
+The ip access-class 1 in command enables ACL 1 for processing inbound Telnet and SSH connections into that router, based on the source IP address of those incoming packets. It has no impact on Telnet or SSH attempts from the router to some other host. It has no impact on a user later reaching enable mode. It also has nothing to do with filtering packets that would otherwise be routed through the router. Note that the ACL matches all packets whose source IP address is in subnet 172.16.4.0/23, which includes the range of numbers from 172.16.4.0 to 172.16.5.255.
+Lesson: Device Security Features
+Objective: Cisco Device Hardening
+
+
